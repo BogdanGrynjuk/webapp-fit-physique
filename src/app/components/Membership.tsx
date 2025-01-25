@@ -2,7 +2,10 @@ import React from 'react';
 
 const Membership = () => {
   return (
-    <section className="h-screen bg-pink-300 flex flex-col items-center justify-center">
+    <section
+      className="h-[calc(100vh-100px)] bg-pink-300 flex flex-col items-center justify-center"
+      id="membership"
+    >
       <h2 className="h1">Membership</h2>
     </section>
   );

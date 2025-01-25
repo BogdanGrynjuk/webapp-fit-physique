@@ -2,7 +2,10 @@ import React from 'react';
 
 const Team = () => {
   return (
-    <section className="h-screen bg-purple-300 flex flex-col items-center justify-center">
+    <section
+      className="h-[calc(100vh-100px)] bg-purple-300 flex flex-col items-center justify-center"
+      id="team"
+    >
       <h2 className="h1">Team</h2>
     </section>
   );
