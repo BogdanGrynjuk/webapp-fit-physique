@@ -4,7 +4,7 @@ import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
 const links = [
-  { name: 'home', target: 'hero', offset: -124 },
+  { name: 'home', target: 'hero', offset: -100 },
   { name: 'about us', target: 'about', offset: -100 },
   { name: 'class', target: 'classes', offset: -100 },
   { name: 'team', target: 'team', offset: -100 },

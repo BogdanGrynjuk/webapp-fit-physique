@@ -6,7 +6,7 @@ const Testimonials = () => {
       className="h-[50vh] bg-teal-300 flex flex-col items-center justify-center"
       id="testimonials"
     >
-      <h2 className="h1">Testimonials</h2>
+      <h2 className="h2">Testimonials</h2>
     </section>
   );
 };

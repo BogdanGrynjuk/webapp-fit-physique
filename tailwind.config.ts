@@ -13,6 +13,7 @@ export default {
     },
 
     screens: {
+      xs: '320px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -25,8 +26,8 @@ export default {
     },
 
     backgroundImage: {
-      hero: 'url(./public/assets/img/hero/bg.png)',
-      membership: 'url(./public/assets/img/membership/bg.jpg)',
+      hero: 'url(../../public/assets/img/hero/bg.png) ',
+      membership: 'url(../../public/assets/img/membership/bg.jpg)',
     },
 
     extend: {
