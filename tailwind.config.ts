@@ -9,11 +9,20 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: '16px',
+      padding: {
+        DEFAULT: '16px',
+        xs: '8px',
+        mobile: '8px',
+        sm: '16px',
+        md: '16px',
+        lg: '16px',
+        xl: '16px',
+      },
     },
 
     screens: {
       xs: '320px',
+      mobile: '480px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
