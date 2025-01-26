@@ -2,9 +2,10 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css/navigation';
 
 import HeroSlide from './HeroSlide';
 import SwiperNavButtons from './SwiperNavButtons';
@@ -21,21 +22,29 @@ const slides = [
     title: 'Real Results',
     subtitle: 'in Minimum Time',
     description:
-      'Push your limits with workouts designed to deliver the fastest results for your fitness goals.',
-    buttonText: 'Join Us',
+      'Push past your limits with high-impact workouts crafted for rapid and lasting transformations',
+    buttonText: 'Start Now',
   },
   {
     title: 'Be Strong',
     subtitle: 'Live Better',
     description:
-      'Empower yourself to live a healthier life through fitness, mindfulness, and community support.',
+      'Empower yourself to live a healthier life through fitness, mindfulness, and community support',
     buttonText: 'Join Us',
   },
 ];
 
 const HeroSlider = () => {
   return (
-    <Swiper className="h-full">
+    <Swiper
+      loop={true}
+      modules={[Autoplay]}
+      autoplay={{
+        delay: 10000,
+        disableOnInteraction: false,
+      }}
+      className="h-full"
+    >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
           <HeroSlide
@@ -48,12 +57,12 @@ const HeroSlider = () => {
       ))}
       <SwiperNavButtons
         containerStyles={
-          'absolute z-50 bottom-2 md:bottom-4 lg:bottom-8 right-0 flex gap-2'
+          'absolute z-50 w-full h-[170px] mobile:h-auto flex justify-center md:justify-end bottom-2 md:bottom-4 lg:bottom-8 right-0 flex gap-1'
         }
         buttonStyles={
-          'w-[56px] h-[56px] border border-accent flex items-center justify-center text-white hover:bg-accent transitional-all duration-300'
+          'w-[40px] h-[40px] md:w-[56px] md:h-[56px] border border-accent flex items-center justify-center text-white hover:bg-accent transitional-all duration-300'
         }
-        iconStyles={'text-2xl'}
+        iconStyles={'text-xl md:text-2xl'}
       />
     </Swiper>
   );

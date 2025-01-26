@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+'use client';
+
+import React from 'react';
 import CustomButton from './CustomButton';
-import { useMediaQuery } from 'react-responsive';
+
 import clsx from 'clsx';
 
 const HeroSlide = ({
@@ -14,37 +16,25 @@ const HeroSlide = ({
   description: string;
   buttonText: string;
 }) => {
-  const [isClient, setIsClient] = useState(false);
-  const isLargeHeight = useMediaQuery({ query: '(min-height: 480px)' });
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null;
-  }
-
   return (
     <div
       className={clsx(
-        'h-full lg:flex lg:justify-end',
-        isLargeHeight && 'pt-40',
+        'h-full flex mt-[130px] mobile:mt-0 md:items-center justify-center lg:justify-end',
       )}
     >
-      <div className="flex flex-col items-center lg:items-start lg:max-w-[710px]">
+      <div className="flex flex-col items-center lg:items-start lg:max-w-[700px]">
         <h1 className="h2 md:h1 flex flex-col gap-0 md:gap-2 lg:gap-4 text-center lg:text-left mb-2">
           <strong className="text-accent tracking-tighter">{title}</strong>
           <span className=" text-white tracking-normal text-2xl md:text-4xl lg:text-7xl font-light ">
             {subtitle}
           </span>
         </h1>
-        <p className="font-roboto text-sm mobile:text-base text-white text-center lg:text-left mb-4">
+        <p className="font-roboto text-sm mobile:text-base tracking-wide text-white text-center lg:text-left mb-4">
           {description}
         </p>
         <CustomButton
           text={buttonText}
-          containerStyles={'w-[162px] h-[56px]'}
+          containerStyles={'w-[146px] h-[40px] md:w-[162px] md:h-[56px]'}
         />
       </div>
     </div>
