@@ -46,9 +46,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-gray-200">
+    <html lang="en" className="bg-white">
       <body
-        className={`${oswald.variable} ${roboto.variable} antialiased bg-white w-full max-w-[1920px] mx-auto`}
+        className={`${oswald.variable} ${roboto.variable} antialiased bg-gray-200 w-full max-w-[1920px] mx-auto`}
       >
         <Header />
         {children}

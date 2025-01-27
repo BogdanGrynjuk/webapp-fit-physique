@@ -29,19 +29,19 @@
   }
 
   .h2 {
-    @apply text-[36px];
+    @apply text-[32px] mobile:text-[36px];
   }
 
   .h3 {
-    @apply text-[32px];
+    @apply text-[28px] mobile:text-[32px];
   }
 
   .h4 {
-    @apply text-[26px];
+    @apply text-[22px] mobile:text-[26px];
   }
 
   .h5 {
-    @apply text-[22px];
+    @apply text-[18px] mobile:text-[22px];
   }
 }
 
