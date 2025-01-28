@@ -37,11 +37,17 @@
   }
 
   .h4 {
-    @apply text-[22px] mobile:text-[26px];
+    @apply text-[20px] mobile:text-[22px] xl:text-[26px];
   }
 
   .h5 {
     @apply text-[18px] mobile:text-[22px];
+  }
+
+  .visually-hidden {
+    @apply absolute w-[1px] h-[1px] m-[-1px] border-0 p-0 whitespace-nowrap overflow-hidden;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
   }
 }
 

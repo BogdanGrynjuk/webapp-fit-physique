@@ -13,15 +13,15 @@ const statistic = [
 const AboutAchievements = () => {
   return (
     <section>
-      <h3>Achievements</h3>
-      <ul className="grid grid-cols-2 md:grid-cols-4 gap-16">
+      <h3 className="visually-hidden">Our achievements</h3>
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 xl:gap-16">
         {statistic.map((item, index) => (
           <li
             key={index}
-            className="flex flex-col gap-6 items-center justify-center"
+            className="flex flex-col gap-4 items-center justify-start"
           >
-            <div className="w-36 h-36 border border-accent rounded-full p-2">
-              <div className="w-full h-full border border-accent/30 rounded-full flex flex-col items-center justify-center text-5xl">
+            <div className="w-32 h-32 xl:w-36 xl:h-36 border border-accent rounded-full p-2">
+              <div className="w-full h-full border border-accent/30 rounded-full flex flex-col items-center justify-center text-4xl xl:text-5xl">
                 {item.value}
               </div>
             </div>

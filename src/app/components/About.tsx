@@ -10,10 +10,10 @@ import AboutAchievements from './AboutAchievements';
 const About = () => {
   return (
     <section
-      className="pt-8 pb-16 lg:pt-14 lg:pb-28 flex flex-col items-center justify-center mt-[100px]"
+      className="min-h-[calc(100vh-100px)] pt-8 pb-8 lg:pt-14 lg:pb-14 flex flex-col items-center justify-start"
       id="about"
     >
-      <div className="container mx-auto flex flex-col items-center justify-center gap-8">
+      <div className="container mx-auto flex-1 flex flex-col items-center justify-between gap-8">
         <div className="flex flex-col gap-2 items-center text-center">
           <motion.h2
             variants={fadeIn('up', 0.4)}
@@ -36,7 +36,6 @@ const About = () => {
             and expert guidance.
           </motion.p>
         </div>
-
         <AboutFeatures />
         <AboutAchievements />
       </div>

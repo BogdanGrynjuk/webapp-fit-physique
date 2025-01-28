@@ -22,7 +22,7 @@ const HeroSlide = ({
   return (
     <div
       className={clsx(
-        'h-full flex mt-[130px] mobile:mt-0 md:items-center justify-center lg:justify-end',
+        'h-full flex pt-[130px] mobile:pt-0 md:items-center justify-center lg:justify-end',
       )}
     >
       <div className="flex flex-col items-center lg:items-start lg:max-w-[700px]">
