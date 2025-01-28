@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 import { fadeIn } from '../lib/variants';
 import AboutFeatures from './AboutFeatures';
+import AboutAchievements from './AboutAchievements';
 
 const About = () => {
   return (
@@ -37,6 +38,7 @@ const About = () => {
         </div>
 
         <AboutFeatures />
+        <AboutAchievements />
       </div>
     </section>
   );
