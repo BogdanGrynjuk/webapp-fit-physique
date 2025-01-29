@@ -1,11 +1,11 @@
+import Hero from './components/HeroSection';
 import About from './components/AboutUsSection';
-import Blog from './components/Blog';
-import Brands from './components/Brands';
-import Classes from './components/Classes';
-import Hero from './components/Hero';
-import Membership from './components/Membership';
-import Team from './components/Team';
-import Testimonials from './components/Testimonials';
+import Blog from './components/BlogSection';
+import Brands from './components/BrandsSection';
+import Classes from './components/ClassesSection';
+import Membership from './components/MembershipSection';
+import Team from './components/TeamSection';
+import Testimonials from './components/TestimonialsSection';
 
 export default function Home() {
   return (
