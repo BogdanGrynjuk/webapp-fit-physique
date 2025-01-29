@@ -25,3 +25,14 @@ export const fadeIn = (direction: string, delay: number) => {
     },
   };
 };
+
+export const staggerFadeIn = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      ease: 'linear',
+    },
+  },
+};
