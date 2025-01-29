@@ -25,7 +25,7 @@ const features = [
   },
 ];
 
-const AboutFeatures = () => {
+const Features = () => {
   return (
     <section>
       <h3 className="visually-hidden">Features</h3>
@@ -53,4 +53,4 @@ const AboutFeatures = () => {
   );
 };
 
-export default AboutFeatures;
+export default Features;

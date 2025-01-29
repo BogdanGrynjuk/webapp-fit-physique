@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import MobileNav from './MobileNav';
-import DesktopNav from './DesktopNav';
+import clsx from 'clsx';
 import Image from 'next/image';
 import { Link as ScrollLink } from 'react-scroll';
-import clsx from 'clsx';
+
+import MobileNav from './MobileNav';
+import DesktopNav from './DesktopNav';
+
 import { MdClose, MdMenu } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
 
@@ -50,6 +52,7 @@ const Header = () => {
         />
 
         <DesktopNav containerStyles="items-center gap-4 hidden xl:flex" />
+
         <div className="flex items-center gap-4 text-white">
           <div className="flex items-center gap-4 text-base font-medium ">
             <button type="button" className="text-4xl">

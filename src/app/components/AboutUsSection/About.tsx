@@ -3,9 +3,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import { fadeIn } from '../lib/variants';
-import AboutFeatures from './AboutFeatures';
-import AboutAchievements from './AboutAchievements';
+import { fadeIn } from '../../lib/variants';
+
+import Features from './Features';
+import Achievements from './Achievements';
 
 const About = () => {
   return (
@@ -36,8 +37,8 @@ const About = () => {
             and expert guidance.
           </motion.p>
         </div>
-        <AboutFeatures />
-        <AboutAchievements />
+        <Features />
+        <Achievements />
       </div>
     </section>
   );

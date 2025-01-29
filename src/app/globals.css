@@ -37,7 +37,7 @@
   }
 
   .h4 {
-    @apply text-[20px] mobile:text-[22px] xl:text-[26px];
+    @apply text-[22px] xl:text-[26px];
   }
 
   .h5 {
