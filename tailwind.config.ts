@@ -36,7 +36,7 @@ export default {
 
     backgroundImage: {
       hero: 'url(../../public/assets/img/hero/bg.png) ',
-      membership: 'url(../../public/assets/img/membership/bg.jpg)',
+      membership: 'url(../../public/assets/img/membership/bg.jpg)',      
     },
 
     extend: {
