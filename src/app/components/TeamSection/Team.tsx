@@ -6,7 +6,7 @@ const Team = () => {
       className="h-[calc(100vh-100px)] bg-purple-300 flex flex-col items-center justify-center"
       id="team"
     >
-      <h2 className="h1">Team</h2>
+      <h2 className="h2">Our Trainers</h2>
     </section>
   );
 };
