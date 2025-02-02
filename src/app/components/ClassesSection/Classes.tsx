@@ -43,7 +43,7 @@ const Classes = () => {
         variants={fadeIn('up', 0.2)}
         initial="hidden"
         whileInView={'show'}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: false, amount: 0.05 }}
         className="grid grid-cols-1 lg:grid-cols-2"
       >
         {classes.map((item, index) => {

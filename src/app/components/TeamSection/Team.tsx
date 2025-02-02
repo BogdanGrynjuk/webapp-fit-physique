@@ -15,7 +15,7 @@ const trainers = [
     fullName: 'David Williams',
     role: 'Body Builder Coach',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dolore?',
+      'Creates personalized training plans to build strength and muscle mass efficiently.',
     onlineProfile: [
       { icon: FaFacebookF, href: 'http://facebook.com' },
       { icon: FaXTwitter, href: 'http://twitter.com' },
@@ -27,7 +27,7 @@ const trainers = [
     fullName: 'Rosy Rivera',
     role: 'Cardio Coach',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dolore?',
+      'Helps improve endurance, breathing efficiency, and overall cardiovascular health.',
     onlineProfile: [
       { icon: FaFacebookF, href: 'http://facebook.com' },
       { icon: FaXTwitter, href: 'http://twitter.com' },
@@ -39,7 +39,7 @@ const trainers = [
     fullName: 'Matt Stonie',
     role: 'Crossfit Coach',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dolore?',
+      'Designs high-intensity workouts to enhance agility, stamina, and functional strength.',
     onlineProfile: [
       { icon: FaFacebookF, href: 'http://facebook.com' },
       { icon: FaXTwitter, href: 'http://twitter.com' },
@@ -49,9 +49,9 @@ const trainers = [
   {
     photo: '/assets/img/trainers/sofia.jpg',
     fullName: 'Sofia Lauren',
-    role: 'fitness Coach',
+    role: 'Fitness Coach',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dolore?',
+      'A mix of strength and cardio exercises to maintain energy, health, and an active lifestyle.',
     onlineProfile: [
       { icon: FaFacebookF, href: 'http://facebook.com' },
       { icon: FaXTwitter, href: 'http://twitter.com' },
@@ -62,13 +62,10 @@ const trainers = [
 
 const Team = () => {
   return (
-    <section
-      className="pt-8 pb-8 lg:pt-14 lg:pb-14 min-h-[calc(100vh-100px)]"
-      id="team"
-    >
-      <div className="container mx-auto flex flex-col gap-10 items-center justify-between min-h-[calc(100vh-100px-(2*56px))]">
+    <section className="pt-8 pb-8 lg:pt-14 lg:pb-14" id="team">
+      <div className="container mx-auto flex flex-col gap-10 items-center justify-between">
         <motion.h2
-          variants={fadeIn('up', 0.3)}
+          variants={fadeIn('up', 0.2)}
           initial="hidden"
           whileInView={'show'}
           viewport={{ once: false, amount: 0.2 }}
@@ -77,10 +74,10 @@ const Team = () => {
           Our Trainers
         </motion.h2>
         <motion.ul
-          variants={fadeIn('up', 0.5)}
+          variants={fadeIn('up', 0.4)}
           initial="hidden"
           whileInView={'show'}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.01 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
         >
           {trainers.map((trainer, index) => (
@@ -96,10 +93,10 @@ const Team = () => {
           ))}
         </motion.ul>
         <motion.div
-          variants={fadeIn('up', 0.6)}
+          variants={fadeIn('up', 0.5)}
           initial="hidden"
           whileInView={'show'}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           <CustomButton
             containerStyles="w-[200px] h-[40px] md:w-[220px] md:h-[56px]"
