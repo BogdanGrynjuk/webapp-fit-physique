@@ -7,47 +7,48 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { MdClose } from 'react-icons/md';
-import { FaCheck } from 'react-icons/fa6';
+import { FaCheck, FaXmark } from 'react-icons/fa6';
+
+import MembershipCard from './MembershipCard';
 
 const membershipCards = [
   {
     title: 'standard',
     price: 30,
     benefits: [
-      { icon: FaCheck, text: 'includes membership' },
-      { icon: FaCheck, text: 'access to all gym facilities' },
-      { icon: MdClose, text: 'diet plan included' },
-      { icon: FaCheck, text: 'health and fitness tips' },
-      { icon: MdClose, text: 'monday-friday gym access' },
-      { icon: FaCheck, text: 'full access to everything' },
-      { icon: MdClose, text: 'no additional amenities' },
+      { Icon: FaCheck, text: 'includes membership' },
+      { Icon: FaCheck, text: 'access to all gym facilities' },
+      { Icon: FaXmark, text: 'diet plan included' },
+      { Icon: FaCheck, text: 'health and fitness tips' },
+      { Icon: FaXmark, text: 'monday-friday gym access' },
+      { Icon: FaCheck, text: 'full access to everything' },
+      { Icon: FaXmark, text: 'no additional amenities' },
     ],
   },
   {
     title: 'ultimate',
     price: 45,
     benefits: [
-      { icon: FaCheck, text: 'includes membership' },
-      { icon: FaCheck, text: 'access to all gym facilities' },
-      { icon: MdClose, text: 'diet plan included' },
-      { icon: FaCheck, text: 'health and fitness tips' },
-      { icon: FaCheck, text: 'monday-friday gym access' },
-      { icon: FaCheck, text: 'full access to everything' },
-      { icon: MdClose, text: 'no additional amenities' },
+      { Icon: FaCheck, text: 'includes membership' },
+      { Icon: FaCheck, text: 'access to all gym facilities' },
+      { Icon: FaXmark, text: 'diet plan included' },
+      { Icon: FaCheck, text: 'health and fitness tips' },
+      { Icon: FaCheck, text: 'monday-friday gym access' },
+      { Icon: FaCheck, text: 'full access to everything' },
+      { Icon: FaXmark, text: 'no additional amenities' },
     ],
   },
   {
     title: 'professional',
     price: 60,
     benefits: [
-      { icon: FaCheck, text: 'includes membership' },
-      { icon: FaCheck, text: 'access to all gym facilities' },
-      { icon: FaCheck, text: 'diet plan included' },
-      { icon: FaCheck, text: 'health and fitness tips' },
-      { icon: FaCheck, text: 'monday-friday gym access' },
-      { icon: FaCheck, text: 'full access to everything' },
-      { icon: FaCheck, text: 'no additional amenities' },
+      { Icon: FaCheck, text: 'includes membership' },
+      { Icon: FaCheck, text: 'access to all gym facilities' },
+      { Icon: FaCheck, text: 'diet plan included' },
+      { Icon: FaCheck, text: 'health and fitness tips' },
+      { Icon: FaCheck, text: 'monday-friday gym access' },
+      { Icon: FaCheck, text: 'full access to everything' },
+      { Icon: FaCheck, text: 'no additional amenities' },
     ],
   },
 ];
@@ -58,28 +59,29 @@ const MembershipSlider = () => {
       slidesPerView={1}
       modules={[Pagination]}
       pagination={{
+        el: '.custom-pagination',
         clickable: true,
+        renderBullet: (_, className) => `<span class="${className}"></span>`,
       }}
       breakpoints={{
         786: {
           slidesPerView: 2,
-          spaceBetween: 30,
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 30,
         },
       }}
-      className="min-h-[680px]"
     >
-      {membershipCards.map((item, index) => (
+      {membershipCards.map((card, index) => (
         <SwiperSlide key={index}>
-          <div>
-            <h4>slide {index + 1}</h4>
-            <h4>membership card{item.title}</h4>
-          </div>
+          <MembershipCard
+            title={card.title}
+            price={card.price}
+            benefits={card.benefits}
+          />
         </SwiperSlide>
       ))}
+      <div className="custom-pagination flex justify-center items-center gap-4 h-5" />
     </Swiper>
   );
 };

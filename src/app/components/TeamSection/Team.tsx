@@ -62,8 +62,11 @@ const trainers = [
 
 const Team = () => {
   return (
-    <section className="pt-8 pb-8 lg:pt-14 lg:pb-14" id="team">
-      <div className="container mx-auto flex flex-col gap-10 items-center justify-between">
+    <section
+      className="pt-8 pb-8 lg:pt-14 lg:pb-14 xl:min-h-[calc(100vh-100px)]"
+      id="team"
+    >
+      <div className="container mx-auto flex flex-col gap-10 items-center justify-between xl:min-h-[calc(100vh-100px-(2*56px))]">
         <motion.h2
           variants={fadeIn('up', 0.2)}
           initial="hidden"
