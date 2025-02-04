@@ -6,14 +6,14 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
 import TestimonialsSlider from './TestimonialsSlider';
+import TestimonialForm from './TestimonialForm';
 
-const Community = () => {
+const Testimonials = () => {
   return (
-    <section id="community">
-      <h2 className="visually-hidden">Community</h2>
-      <section className="pt-8 pb-8 lg:pt-14 lg:pb-14">
+    <section id="testimonials" className="xl:min-h-[calc(100vh-100px)]">
+      <div className="pt-8 pb-8 lg:pt-14 lg:pb-14">
         <div className="container mx-auto">
-          <motion.h3
+          <motion.h2
             variants={fadeIn('up', 0.2)}
             initial="hidden"
             whileInView={'show'}
@@ -21,7 +21,7 @@ const Community = () => {
             className="h2 text-center mb-5"
           >
             Our Testimonials
-          </motion.h3>
+          </motion.h2>
           <motion.div
             variants={fadeIn('up', 0.4)}
             initial="hidden"
@@ -31,14 +31,10 @@ const Community = () => {
             <TestimonialsSlider />
           </motion.div>
         </div>
-      </section>
-      <section className="pt-8 pb-8 lg:pt-14 lg:pb-14 bg-gray-200">
-        <div className="container mx-auto">
-          <h3 className="h2 text-center">Our Partners</h3>
-        </div>
-      </section>
+      </div>
+      <TestimonialForm />
     </section>
   );
 };
 
-export default Community;
+export default Testimonials;

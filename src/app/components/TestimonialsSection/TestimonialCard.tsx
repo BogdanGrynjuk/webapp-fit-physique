@@ -13,7 +13,7 @@ const TestimonialCard = ({
   review: string;
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
+    <div className="flex flex-col items-center justify-start gap-5">
       <Image
         src={photo}
         width={90}
@@ -21,9 +21,9 @@ const TestimonialCard = ({
         alt={`photo ${name}`}
         className="rounded-full border-2 border-accent"
       />
-      <div className="text-center max-w-[380px] flex flex-col justify-center items-center">
+      <div className="flex-grow text-center max-w-[380px] flex flex-col justify-between items-center">
         <FaQuoteLeft className="text-2xl text-gray-300 mb-1" />
-        <p className="text-sm/7 mobile:text-base/7 text-primary-100/50 mb-4">
+        <p className="flex-grow text-sm/7 mobile:text-base/7 text-primary-100/50 mb-4">
           {review}
         </p>
         <span className="font-medium text-2xl capitalize">{name}</span>

@@ -4,7 +4,7 @@ import Blog from './components/BlogSection';
 import Classes from './components/ClassesSection';
 import Membership from './components/MembershipSection';
 import Team from './components/TeamSection';
-import Community from './components/CommunitySection';
+import Testimonials from './components/TestimonialsSection';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <Classes />
       <Team />
       <Membership />
-      <Community />
+      <Testimonials />
       <Blog />
     </main>
   );
