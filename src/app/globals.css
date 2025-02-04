@@ -51,11 +51,11 @@
   }
 
   .custom-pagination .swiper-pagination-bullet {
-    @apply w-2 h-2 bg-accent rounded-full transition-all opacity-100 cursor-pointer;
+    @apply w-2 h-2 bg-accent rounded-full transition-all opacity-70 cursor-pointer;
   }
 
   .custom-pagination .swiper-pagination-bullet-active {
-    @apply relative bg-accent before:absolute before:-top-1 before:-left-1 before:w-4 before:h-4 before:border before:border-accent before:rounded-full before:content-[''];
+    @apply relative bg-accent before:absolute before:-top-1 before:-left-1 before:w-4 before:h-4 before:border-2 opacity-100 before:border-accent before:rounded-full before:content-[''];
   }
 }
 

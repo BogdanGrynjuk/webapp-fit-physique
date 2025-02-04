@@ -64,7 +64,7 @@ const MembershipSlider = () => {
         renderBullet: (_, className) => `<span class="${className}"></span>`,
       }}
       breakpoints={{
-        786: {
+        768: {
           slidesPerView: 2,
         },
         1024: {

@@ -1,11 +1,10 @@
 import Hero from './components/HeroSection';
 import About from './components/AboutUsSection';
 import Blog from './components/BlogSection';
-import Brands from './components/BrandsSection';
 import Classes from './components/ClassesSection';
 import Membership from './components/MembershipSection';
 import Team from './components/TeamSection';
-import Testimonials from './components/TestimonialsSection';
+import Community from './components/CommunitySection';
 
 export default function Home() {
   return (
@@ -15,9 +14,8 @@ export default function Home() {
       <Classes />
       <Team />
       <Membership />
-      <Testimonials />
+      <Community />
       <Blog />
-      <Brands />
     </main>
   );
 }

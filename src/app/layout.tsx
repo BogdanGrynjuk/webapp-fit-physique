@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-white">
       <body
-        className={`${oswald.variable} ${roboto.variable} antialiased bg-gray-200 w-full max-w-[1920px] mx-auto`}
+        className={`${oswald.variable} ${roboto.variable} antialiased bg-gray-100 w-full max-w-[1920px] mx-auto`}
       >
         <Header />
         {children}
