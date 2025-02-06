@@ -10,8 +10,9 @@ const links = [
   { name: 'team', target: 'team', offset: -100 },
   { name: 'prices', target: 'membership', offset: -100 },
   { name: 'testimonials', target: 'testimonials', offset: -100 },
+  { name: 'faq', target: 'faq', offset: -100 },
   { name: 'blog', target: 'blog', offset: -100 },
-  { name: 'contact us', target: 'footer', offset: -192 },
+  { name: 'contact us', target: 'footer', offset: -300 },
 ];
 
 const DesktopNav = ({ containerStyles }: { containerStyles: string }) => {

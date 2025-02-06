@@ -1,17 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import CustomButton from '../UI/CustomButton';
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
 const TestimonialForm = () => {
-  const [isUserActive, setIsUserActive] = useState(false);
+  const isUserActive = false;
   return (
     <div className="relative w-full min-h-[200px] aspect-[1920/480] bg-testimonial bg-no-repeat bg-center bg-cover">
       <div className="absolute inset-0 w-full h-full z-10 bg-black/40">
-        <div className="container mx-auto h-full flex flex-col items-center justify-center gap-5">
+        <div className="container mx-auto h-full flex flex-col items-center justify-center gap-5 overflow-hidden">
           <motion.p
             variants={fadeIn('up', 0.2)}
             initial={'hidden'}

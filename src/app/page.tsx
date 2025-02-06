@@ -1,10 +1,12 @@
 import Hero from './components/HeroSection';
 import About from './components/AboutUsSection';
-import Blog from './components/BlogSection';
 import Classes from './components/ClassesSection';
-import Membership from './components/MembershipSection';
 import Team from './components/TeamSection';
+import Membership from './components/MembershipSection';
 import Testimonials from './components/TestimonialsSection';
+import Faq from './components/FAQSection/Faq';
+import Blog from './components/BlogSection';
+import Brands from './components/BrandsSection';
 
 export default function Home() {
   return (
@@ -15,7 +17,9 @@ export default function Home() {
       <Team />
       <Membership />
       <Testimonials />
+      <Faq />
       <Blog />
+      <Brands />
     </main>
   );
 }
