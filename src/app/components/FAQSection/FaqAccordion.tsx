@@ -56,7 +56,7 @@ const FaqAccordion = ({
           isActiveAccordion ? 'mt-2 opacity-100' : 'mt-0 opacity-0',
         )}
       >
-        <p>{answer}</p>
+        <div>{answer}</div>
       </div>
     </div>
   );

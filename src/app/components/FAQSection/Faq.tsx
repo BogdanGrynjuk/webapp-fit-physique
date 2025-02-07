@@ -2,12 +2,12 @@
 
 import React from 'react';
 import FaqAccordion from './FaqAccordion';
+import CalculatorBMI from './CalculatorBMI';
 
 const questionsList = [
   {
     question: 'How can I calculate my Body Mass Index (BMI)?',
-    answer:
-      'You can calculate your BMI by dividing your weight in kilograms by the square of your height in meters. A BMI between 18.5 and 24.9 is generally considered healthy.',
+    answer: <CalculatorBMI />,
   },
   {
     question: 'What diet is important during and after workout?',
