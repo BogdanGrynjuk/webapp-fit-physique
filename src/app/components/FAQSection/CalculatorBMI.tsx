@@ -42,13 +42,12 @@ const CalculatorBMI = () => {
 
   const handleHeightChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
-
     if (val === '') {
       setHeight('');
       return;
     }
-    const value = Number(val);
 
+    const value = Number(val);
     if (value > 0 && value <= 220 && Number.isInteger(value)) {
       setHeight(val);
     }
@@ -56,13 +55,12 @@ const CalculatorBMI = () => {
 
   const handleWeightChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
-
     if (val === '') {
       setWeight('');
       return;
     }
-    const value = Number(val);
 
+    const value = Number(val);
     if (value > 0 && value <= 200) {
       setWeight(val);
     }
@@ -85,8 +83,7 @@ const CalculatorBMI = () => {
   return (
     <div className="flex flex-col gap-4">
       <h4 className="h4 text-center">Calculator IBM</h4>
-
-      <div className="grid grid-cols-1 mobile:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 mobile:grid-cols-2 gap-6">
         <form className="flex flex-col items-center justify-between h-[200px] md:h-[220px]">
           <div className="flex flex-col gap-[2px]">
             <input
@@ -97,7 +94,7 @@ const CalculatorBMI = () => {
               placeholder="Your Weight in kg"
               value={weight}
               onChange={handleWeightChange}
-              className="p-3 w-[200px] h-[40px] md:w-[220px] md:h-[56px] border-2 border-accent text-center"
+              className="p-3 w-[200px] h-[40px] md:w-[220px] md:h-[56px] border border-primary-100/50 text-center"
             />
             <span className="text-xs">Weight (up to 200 kg)</span>
           </div>
@@ -111,7 +108,7 @@ const CalculatorBMI = () => {
               placeholder="Your Height in cm"
               value={height}
               onChange={handleHeightChange}
-              className="p-3 w-[200px] h-[40px] md:w-[220px] md:h-[56px] border-2 border-accent text-center"
+              className="p-3 w-[200px] h-[40px] md:w-[220px] md:h-[56px] border border-primary-100/50 text-center"
             />
             <span className="text-xs">Height (up to 220 cm)</span>
           </div>
@@ -125,7 +122,7 @@ const CalculatorBMI = () => {
 
         <div
           ref={refResultBox}
-          className="flex flex-col items-center justify-center gap-4 mx-auto p-3 w-[200px] h-[200px] md:w-[220px] md:h-[220px] bg-white border-2 border-accent"
+          className="flex flex-col items-center justify-center gap-4 mx-auto p-3 w-[200px] h-[200px] md:w-[220px] md:h-[220px] bg-white border border-primary-100/50"
         >
           {bmi === 0 || height === '' || weight === '' ? (
             <motion.p

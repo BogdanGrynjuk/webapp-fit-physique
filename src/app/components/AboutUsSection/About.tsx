@@ -11,7 +11,7 @@ import Achievements from './Achievements';
 const About = () => {
   return (
     <section
-      className="min-h-[calc(100vh-100px)] pt-8 pb-8 lg:pt-14 lg:pb-14 flex flex-col items-center justify-start"
+      className="pt-8 pb-8 lg:pt-14 lg:pb-14 flex flex-col items-center justify-start"
       id="about"
     >
       <div className="container mx-auto flex-1 flex flex-col items-center justify-between gap-8">

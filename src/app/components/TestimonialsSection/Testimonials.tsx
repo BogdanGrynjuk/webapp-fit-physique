@@ -10,7 +10,7 @@ import TestimonialForm from './TestimonialForm';
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="xl:min-h-[calc(100vh-100px)]">
+    <section id="testimonials">
       <div className="pt-8 pb-8 lg:pt-14 lg:pb-14">
         <div className="container mx-auto">
           <motion.h2

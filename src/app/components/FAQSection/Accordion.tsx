@@ -1,8 +1,10 @@
+'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
 import clsx from 'clsx';
 import { FaAngleDown } from 'react-icons/fa6';
 
-const FaqAccordion = ({
+const Accordion = ({
   question,
   answer,
 }: {
@@ -24,7 +26,7 @@ const FaqAccordion = ({
   }, [isActiveAccordion]);
 
   return (
-    <div className="p-4 flex flex-col bg-gray-200 border-accent max-w-[700px]">
+    <div className="p-4 flex flex-col bg-gray-200 border-accent">
       <button
         className="group flex justify-between gap-4 items-center"
         type="button"
@@ -62,4 +64,4 @@ const FaqAccordion = ({
   );
 };
 
-export default FaqAccordion;
+export default Accordion;

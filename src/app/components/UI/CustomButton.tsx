@@ -1,18 +1,22 @@
 import clsx from 'clsx';
 import React from 'react';
 
+type CustomButtonProps = {
+  text: string;
+  containerStyles: string;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+};
+
 const CustomButton = ({
   text,
   containerStyles,
   onClick,
-}: {
-  text: string;
-  containerStyles: string;
-  onClick?: () => void;
-}) => {
+  type = 'button',
+}: CustomButtonProps) => {
   return (
     <button
-      type="button"
+      type={type}
       className={clsx(
         containerStyles,
         'group relative overflow-hidden bg-accent uppercase cursor-pointer',
