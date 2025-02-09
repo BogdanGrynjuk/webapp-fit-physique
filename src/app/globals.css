@@ -44,6 +44,10 @@
     @apply text-[18px] mobile:text-[22px];
   }
 
+  .h6 {
+    @apply text-[16px] mobile:text-[18px];
+  }
+
   .visually-hidden {
     @apply absolute w-[1px] h-[1px] m-[-1px] border-0 p-0 whitespace-nowrap overflow-hidden;
     clip-path: inset(100%);

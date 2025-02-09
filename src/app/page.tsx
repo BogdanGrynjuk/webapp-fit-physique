@@ -5,7 +5,7 @@ import Team from './components/TeamSection';
 import Membership from './components/MembershipSection';
 import Testimonials from './components/TestimonialsSection';
 import Faq from './components/FAQSection/Faq';
-import Blog from './components/BlogSection';
+import Blogs from './components/BlogsSection';
 import Brands from './components/BrandsSection';
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <Membership />
       <Testimonials />
       <Faq />
-      <Blog />
+      <Blogs />
       <Brands />
     </main>
   );
