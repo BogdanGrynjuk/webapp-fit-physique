@@ -6,7 +6,7 @@ import Membership from './components/MembershipSection';
 import Testimonials from './components/TestimonialsSection';
 import Faq from './components/FAQSection/Faq';
 import Blogs from './components/BlogsSection';
-import Brands from './components/BrandsSection';
+import Brands from './components/PartnersSection';
 
 export default function Home() {
   return (
