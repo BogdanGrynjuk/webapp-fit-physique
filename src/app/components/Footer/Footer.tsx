@@ -1,12 +1,25 @@
 import React from 'react';
+import ContactsSection from './ContactsSection';
+import BlogsSection from './BlogsSection';
+import GallerySection from './GallerySection';
+import NewsletterSection from './NewsletterSection';
 
 const Footer = () => {
   return (
     <footer
-      className="h-[calc(100vh-300px)] bg-orange-300 flex flex-col items-center justify-center"
+      className="bg-primary-300 pt-8 pb-8 lg:pt-14 lg:pb-14 text-white"
       id="footer"
     >
-      <h2 className="h1">Footer</h2>
+      <div className="container mx-auto">
+        <h2 className="visually-hidden">Footer</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <ContactsSection />
+          <BlogsSection />
+          <GallerySection />
+          <NewsletterSection />
+        </div>
+      </div>
     </footer>
   );
 };

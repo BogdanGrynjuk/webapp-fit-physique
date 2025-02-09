@@ -32,6 +32,7 @@ const TrainerCard = ({
           src={photo}
           alt={`trainer ${fullName}`}
           fill
+          sizes="100vw"
           className="object-cover"
         />
       </div>

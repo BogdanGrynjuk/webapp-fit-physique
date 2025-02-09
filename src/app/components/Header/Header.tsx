@@ -27,7 +27,7 @@ const Header = () => {
       <div className="container mx-auto h-full flex items-center justify-between bg-primary-200">
         <ScrollLink
           to="hero"
-          offset={-124}
+          offset={-100}
           spy={true}
           smooth={true}
           duration={1000}

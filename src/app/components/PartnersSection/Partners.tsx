@@ -47,7 +47,10 @@ const Partners = () => {
                   animationDelay: `${index * 3}s`,
                 }}
               >
-                <Link href={partner.href} className="w-full h-full block">
+                <Link
+                  href={partner.href}
+                  className="relative w-full h-full block"
+                >
                   <Image
                     src={partner.img}
                     alt={partner.name}

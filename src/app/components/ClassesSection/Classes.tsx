@@ -56,7 +56,8 @@ const Classes = () => {
                 src={item.img}
                 alt={`image ${item.name}`}
                 fill
-                objectFit="cover"
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
               <div className="absolute inset-0 bg-black/10 w-full h-full z-10" />
               <div className="z-20 flex flex-col items-center justify-center gap-2 mobile:gap-4 lg:gap-8">
