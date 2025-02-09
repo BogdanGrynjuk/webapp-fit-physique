@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container mx-auto">
         <h2 className="visually-hidden">Footer</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           <ContactsSection />
           <BlogsSection />
           <GallerySection />

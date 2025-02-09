@@ -8,7 +8,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 const ContactsSection = () => {
   return (
-    <section className="flex flex-col gap-6 max-w-[280px]">
+    <section className="flex flex-col gap-6 max-w-[300px]">
       <h2 className="visually-hidden">Contacts</h2>
       <ScrollLink
         to="hero"
@@ -25,7 +25,7 @@ const ContactsSection = () => {
           alt="icon fit physique"
         />
       </ScrollLink>
-      <p className="text-sm/7 mobile:text-base/7 text-white/50">
+      <p className="text-sm/7 mobile:text-base/7 text-white/70">
         Fit Physical Pvt Ltd is for build and fitness body
       </p>
       <address className="flex flex-col gap-6">
@@ -35,7 +35,7 @@ const ContactsSection = () => {
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm mobile:text-base text-white/50 hover:text-accent"
+            className="text-sm mobile:text-base text-white/70 hover:text-accent"
           >
             <div className="flex flex-col">
               <span>Lincoln Park</span>
@@ -51,7 +51,7 @@ const ContactsSection = () => {
               href="tel:5107103464"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm mobile:text-base text-white/50 hover:text-accent"
+              className="text-sm mobile:text-base text-white/70 hover:text-accent"
             >
               (510) 710-3464
             </a>
@@ -59,7 +59,7 @@ const ContactsSection = () => {
               href="tel:5106406326"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm mobile:text-base text-white/50 hover:text-accent"
+              className="text-sm mobile:text-base text-white/70 hover:text-accent"
             >
               (510) 640-6326
             </a>
@@ -73,7 +73,7 @@ const ContactsSection = () => {
               href="mailto:hello@templatesjungle.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm mobile:text-base text-white/50 hover:text-accent"
+              className="text-sm mobile:text-base text-white/70 hover:text-accent"
             >
               hello@templatesjungle.com
             </a>
@@ -81,7 +81,7 @@ const ContactsSection = () => {
               href="mailto:info@templatesjungle.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm mobile:text-base text-white/50 hover:text-accent"
+              className="text-sm mobile:text-base text-white/70 hover:text-accent"
             >
               info@templatesjungle.com
             </a>
