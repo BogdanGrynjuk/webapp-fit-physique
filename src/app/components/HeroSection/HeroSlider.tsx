@@ -60,7 +60,7 @@ const HeroSlider = () => {
           'absolute z-50 w-full h-[170px] mobile:h-auto flex justify-center md:justify-end bottom-2 md:bottom-4 lg:bottom-8 right-0 flex gap-1'
         }
         buttonStyles={
-          'w-[40px] h-[40px] md:w-[56px] md:h-[56px] border border-accent flex items-center justify-center text-white hover:bg-accent transitional-all duration-300'
+          ' bg-primary-300/50 w-[40px] h-[40px] md:w-[56px] md:h-[56px] border border-accent flex items-center justify-center text-white hover:bg-accent transitional-all duration-300'
         }
         iconStyles={'text-xl md:text-2xl'}
       />

@@ -33,6 +33,18 @@ const classes = [
     description:
       'Challenge your endurance, agility, and power through high-intensity, functional, and explosive workouts.',
   },
+  {
+    name: 'boxing',
+    img: '/assets/img/classes/boxing.jpg',
+    description:
+      'Develop endurance, punching power, and reaction speed with intense boxing workouts.',
+  },
+  {
+    name: 'yoga',
+    img: '/assets/img/classes/yoga.jpg',
+    description:
+      'Restore balance, strengthen muscles, and improve flexibility with a calming yoga practice.',
+  },
 ];
 
 const Classes = () => {
@@ -59,7 +71,7 @@ const Classes = () => {
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
               />
-              <div className="absolute inset-0 bg-black/10 w-full h-full z-10" />
+              <div className="absolute inset-0 bg-black/30 w-full h-full z-10" />
               <div className="z-20 flex flex-col items-center justify-center gap-2 mobile:gap-4 lg:gap-8">
                 <motion.h3
                   variants={fadeIn('up', 0.4)}
@@ -75,7 +87,7 @@ const Classes = () => {
                   initial="hidden"
                   whileInView={'show'}
                   viewport={{ once: false, amount: 0.2 }}
-                  className="font-roboto text-sm mobile:text-base text-center text-white max-w-[400px]"
+                  className="font-roboto text-sm mobile:text-base text-center text-white max-w-[300px] mobile:max-w-[400px]"
                 >
                   {item.description}
                 </motion.p>

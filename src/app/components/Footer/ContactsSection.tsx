@@ -8,7 +8,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 const ContactsSection = () => {
   return (
-    <section className="flex flex-col gap-6 max-w-[300px]">
+    <section className="flex flex-col gap-6 xl-w-[300px]">
       <h2 className="visually-hidden">Contacts</h2>
       <ScrollLink
         to="hero"
@@ -35,7 +35,7 @@ const ContactsSection = () => {
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm mobile:text-base text-white/70 hover:text-accent"
+            className="text-sm mobile:text-base text-white/70 hover:text-accent transition-all duration-300"
           >
             <div className="flex flex-col">
               <span>Lincoln Park</span>
@@ -51,7 +51,7 @@ const ContactsSection = () => {
               href="tel:5107103464"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm mobile:text-base text-white/70 hover:text-accent"
+              className="text-sm mobile:text-base text-white/70 hover:text-accent transition-all duration-300"
             >
               (510) 710-3464
             </a>
@@ -59,7 +59,7 @@ const ContactsSection = () => {
               href="tel:5106406326"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm mobile:text-base text-white/70 hover:text-accent"
+              className="text-sm mobile:text-base text-white/70 hover:text-accent transition-all duration-300"
             >
               (510) 640-6326
             </a>

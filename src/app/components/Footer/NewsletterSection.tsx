@@ -2,8 +2,8 @@ import React from 'react';
 
 const NewsletterSection = () => {
   return (
-    <section>
-      <h2 className="h2">Newsletter</h2>
+    <section className="flex flex-col gap-6 max-w-[300px]">
+      <h4 className="h4">Newsletter</h4>
     </section>
   );
 };

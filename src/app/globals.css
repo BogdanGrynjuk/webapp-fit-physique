@@ -66,3 +66,62 @@
 nav .active {
   @apply after:w-[calc(100%-16px)];
 }
+
+.pswp {
+  @apply bg-primary-200/40;
+}
+
+.pswp__top-bar {
+  @apply h-[40px] md:h-[56px] items-center;
+}
+
+.pswp__counter {
+  @apply text-base text-white w-auto h-auto m-0 ml-5 opacity-100;
+}
+
+.pswp__button--close {
+  @apply bg-transparent w-[40px] h-[40px] md:w-[56px] md:h-[56px] flex items-center justify-center text-white;
+}
+
+.pswp__button--arrow--prev,
+.pswp__button--arrow--next {
+  @apply bg-primary-300/50 w-[40px] h-[40px] md:w-[56px] md:h-[56px] flex items-center justify-center text-white hover:bg-accent;
+}
+
+.pswp__button--arrow--prev {
+  @apply ml-5;
+}
+
+.pswp__button--arrow--next {
+  @apply mr-5;
+}
+
+.pswp__button--arrow--prev,
+.pswp__button--arrow--next {
+  border: 1px solid #d4000d;
+  transition: background-color !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 1000ms !important;
+}
+
+.pswp__button--arrow--prev:hover,
+.pswp__button--arrow--next:hover {
+  border: 1px solid #d4000d;
+}
+
+.pswp__button--arrow--prev .pswp__icn,
+.pswp__button--arrow--next .pswp__icn {
+  @apply w-10 h-10 fill-white static m-0;
+}
+
+.pswp__button--arrow--prev .pswp__icn {
+  @apply ml-[10px];
+}
+
+.pswp__button--arrow--next .pswp__icn {
+  @apply mr-[10px];
+}
+
+.pswp__icn {
+  @apply fill-white static;
+}

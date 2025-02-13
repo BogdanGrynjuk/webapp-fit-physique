@@ -9,7 +9,7 @@ const BlogsSection = () => {
     .slice(0, 3);
 
   return (
-    <section className="flex flex-col gap-6 max-w-[300px]">
+    <section className="flex flex-col gap-6 xl:max-w-[300px]">
       <h4 className="h4">Recent blog posts</h4>
       <ul className="flex flex-col">
         {latestBlogs.map((blog) => {
@@ -26,7 +26,7 @@ const BlogsSection = () => {
               className="border-b border-white/50 last:border-0"
             >
               <Link href={'#'} className="py-3 group block">
-                <h6 className="h6 text-white/70 group-hover:text-accent">
+                <h6 className="h6 text-white/70 group-hover:text-accent transition-all duration-300">
                   {blog.title}
                 </h6>
                 <span className="uppercase text-[12px] text-white/40 tracking-[1px] font-semibold">
