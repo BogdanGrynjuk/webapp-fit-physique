@@ -22,14 +22,14 @@ const HeroSlide = ({
   return (
     <div
       className={clsx(
-        'h-full flex pt-[130px] mobile:pt-0 md:items-center justify-center lg:justify-end',
+        'h-full flex pt-[calc(100vh/5)] mobile:pt-0 md:items-center justify-center lg:justify-end',
       )}
     >
       <div className="flex flex-col items-center lg:items-start lg:max-w-[700px]">
         <h1 className="h2 md:h1 flex flex-col gap-0 md:gap-2 lg:gap-4 text-center lg:text-left mb-2">
           <strong className="text-accent tracking-tighter">{title}</strong>
           <motion.span
-            variants={fadeIn('up', 0.4)}
+            variants={fadeIn('up', 0.2)}
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount: 0.2 }}
@@ -39,7 +39,7 @@ const HeroSlide = ({
           </motion.span>
         </h1>
         <motion.p
-          variants={fadeIn('up', 0.6)}
+          variants={fadeIn('up', 0.4)}
           initial="hidden"
           whileInView={'show'}
           viewport={{ once: false, amount: 0.2 }}
@@ -48,7 +48,7 @@ const HeroSlide = ({
           {description}
         </motion.p>
         <motion.div
-          variants={fadeIn('up', 0.8)}
+          variants={fadeIn('up', 0.6)}
           initial="hidden"
           whileInView={'show'}
           viewport={{ once: false, amount: 0.2 }}
