@@ -115,11 +115,11 @@ nav .active {
 }
 
 .pswp__button--arrow--prev .pswp__icn {
-  @apply ml-[10px];
+  @apply ml-[12px];
 }
 
 .pswp__button--arrow--next .pswp__icn {
-  @apply mr-[10px];
+  @apply mr-[12px];
 }
 
 .pswp__icn {

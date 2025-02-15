@@ -8,7 +8,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 const ContactsSection = () => {
   return (
-    <section className="flex flex-col gap-6 xl-w-[300px]">
+    <section className="flex flex-col gap-6">
       <h2 className="visually-hidden">Contacts</h2>
       <ScrollLink
         to="hero"

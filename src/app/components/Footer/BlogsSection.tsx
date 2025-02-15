@@ -23,7 +23,7 @@ const BlogsSection = () => {
           return (
             <li
               key={blog.id}
-              className="border-b border-white/50 last:border-0"
+              className="border-b border-white/50 last:border-0 first:-mt-3"
             >
               <Link href={'#'} className="py-3 group block">
                 <h6 className="h6 text-white/70 group-hover:text-accent transition-all duration-300">

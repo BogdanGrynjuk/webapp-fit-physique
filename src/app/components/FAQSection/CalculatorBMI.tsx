@@ -82,7 +82,7 @@ const CalculatorBMI = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <h4 className="h4 text-center">Calculator IBM</h4>
+      <h4 className="h4 text-center">Calculator BMI</h4>
       <div className="grid grid-cols-1 mobile:grid-cols-2 gap-6">
         <form className="flex flex-col items-center justify-between h-[200px] md:h-[220px]">
           <div className="flex flex-col gap-[2px]">

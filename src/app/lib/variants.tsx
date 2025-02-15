@@ -36,3 +36,18 @@ export const staggerFadeIn = {
     },
   },
 };
+
+export const scale = (delay: number) => {
+  return {
+    hidden: { opacity: 0, scale: 0.7 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1.5,
+        delay: delay,
+        ease: [0.25, 0.6, 0.3, 0.8],
+      },
+    },
+  };
+};
