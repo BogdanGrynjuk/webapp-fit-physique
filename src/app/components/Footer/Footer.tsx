@@ -26,7 +26,7 @@ const Footer = () => {
           variants={staggerFadeIn}
           initial="hidden"
           whileInView={'show'}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.05 }}
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8"
         >
           <motion.div variants={scale(0.2)}>

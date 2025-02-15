@@ -44,9 +44,9 @@ const Header = () => {
         <MobileNav
           containerStyles={clsx(
             isOpenMobileNav
-              ? 'top-[100px] p-4 border-t border-white/10'
+              ? 'top-[100px] p-4 border-t border-white/10 max-h-[calc(100vh-100px)] overflow-y-auto'
               : 'top-[calc(-100%-100px)] pt-0 pb-0 border-white/0 overflow-hidden',
-            'xl:hidden absolute left-0 w-full flex flex-col items-center justify-center text-center bg-primary-200 transition-all duration-500 z-[-10]',
+            'xl:hidden fixed left-0 w-full flex flex-col gap-2 items-center justify-start text-center bg-primary-200 transition-all duration-500 z-[50] scrollbar',
           )}
           onClose={handleCloseMobileNav}
         />

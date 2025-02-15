@@ -61,6 +61,14 @@
   .custom-pagination .swiper-pagination-bullet-active {
     @apply relative bg-accent before:absolute before:-top-1 before:-left-1 before:w-4 before:h-4 before:border-2 opacity-100 before:border-accent before:rounded-full before:content-[''];
   }
+
+  .scrollbar::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-accent rounded-md;
+  }
 }
 
 nav .active {
