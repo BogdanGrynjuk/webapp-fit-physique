@@ -7,8 +7,11 @@ import { fadeIn } from '@/app/lib/variants';
 
 import BlogsSlider from './BlogsSlider';
 import CustomButton from '../UI/CustomButton';
+import { useRouter } from 'next/navigation';
 
 const Blogs = () => {
+  const router = useRouter();
+
   return (
     <section
       className="bg-primary-300 pt-8 pb-8 lg:pt-14 lg:pb-14 text-white"
@@ -40,6 +43,7 @@ const Blogs = () => {
           className="mx-auto"
         >
           <CustomButton
+            onClick={() => router.push('/blogs')}
             text={'view all'}
             containerStyles="w-[100px] h-[40px] md:w-[162px] md:h-[56px]"
           />

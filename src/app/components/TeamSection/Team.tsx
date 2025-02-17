@@ -1,66 +1,41 @@
 'use client';
 
-import React from 'react';
-import { FaFacebookF, FaXTwitter, FaYoutube } from 'react-icons/fa6';
+import React, { useEffect, useState } from 'react';
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../lib/variants';
 
 import TrainerCard from './TrainerCard';
 import CustomButton from '../UI/CustomButton';
+import { Trainer, trainers } from '@/app/data/trainers';
+import { useRouter } from 'next/navigation';
 
-const trainers = [
-  {
-    photo: '/assets/img/trainers/david.jpg',
-    fullName: 'David Williams',
-    role: 'Body Builder Coach',
-    description:
-      'Creates personalized training plans to build strength and muscle mass efficiently.',
-    onlineProfile: [
-      { icon: FaFacebookF, href: 'http://facebook.com' },
-      { icon: FaXTwitter, href: 'http://twitter.com' },
-      { icon: FaYoutube, href: 'http://youtube.com' },
-    ],
-  },
-  {
-    photo: '/assets/img/trainers/rosy.jpg',
-    fullName: 'Rosy Rivera',
-    role: 'Cardio Coach',
-    description:
-      'Helps improve endurance, breathing efficiency, and overall cardiovascular health.',
-    onlineProfile: [
-      { icon: FaFacebookF, href: 'http://facebook.com' },
-      { icon: FaXTwitter, href: 'http://twitter.com' },
-      { icon: FaYoutube, href: 'http://youtube.com' },
-    ],
-  },
-  {
-    photo: '/assets/img/trainers/matt.jpg',
-    fullName: 'Matt Stonie',
-    role: 'Crossfit Coach',
-    description:
-      'Designs high-intensity workouts to enhance agility, stamina, and functional strength.',
-    onlineProfile: [
-      { icon: FaFacebookF, href: 'http://facebook.com' },
-      { icon: FaXTwitter, href: 'http://twitter.com' },
-      { icon: FaYoutube, href: 'http://youtube.com' },
-    ],
-  },
-  {
-    photo: '/assets/img/trainers/sofia.jpg',
-    fullName: 'Sofia Lauren',
-    role: 'Fitness Coach',
-    description:
-      'A mix of strength and cardio exercises to maintain energy, health, and an active lifestyle.',
-    onlineProfile: [
-      { icon: FaFacebookF, href: 'http://facebook.com' },
-      { icon: FaXTwitter, href: 'http://twitter.com' },
-      { icon: FaYoutube, href: 'http://youtube.com' },
-    ],
-  },
-];
+const getUniqueRandomTrainers = (
+  trainers: Trainer[],
+  count: number = 4,
+): Trainer[] => {
+  const uniqueRoles: { [key: string]: Trainer } = {};
 
+  const shuffled = [...trainers].sort(() => Math.random() - 0.5);
+
+  for (const trainer of shuffled) {
+    if (!uniqueRoles[trainer.role]) {
+      uniqueRoles[trainer.role] = trainer;
+    }
+    if (Object.keys(uniqueRoles).length === count) break;
+  }
+
+  return Object.values(uniqueRoles);
+};
 const Team = () => {
+  const router = useRouter();
+
+  const [randomTrainers, setRandomTrainers] = useState<typeof trainers>([]);
+
+  useEffect(() => {
+    setRandomTrainers(getUniqueRandomTrainers(trainers, 4));
+  }, []);
+
   return (
     <section className="pt-8 pb-8 lg:pt-14 lg:pb-14" id="team">
       <div className="container mx-auto flex flex-col gap-10 items-center">
@@ -80,9 +55,10 @@ const Team = () => {
           viewport={{ once: false, amount: 0.01 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
         >
-          {trainers.map((trainer, index) => (
+          {randomTrainers.map((trainer, index) => (
             <li key={index}>
               <TrainerCard
+                id={trainer.id}
                 photo={trainer.photo}
                 fullName={trainer.fullName}
                 role={trainer.role}
@@ -101,6 +77,7 @@ const Team = () => {
           <CustomButton
             containerStyles="w-[200px] h-[40px] md:w-[220px] md:h-[56px]"
             text={'View All Trainers'}
+            onClick={() => router.push('/trainers')}
           />
         </motion.div>
       </div>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Oswald, Roboto } from 'next/font/google';
 import './globals.css';
 
-import Header from './components/Header';
+// import Header from './components/Header';
 import Footer from './components/Footer';
 
 const oswald = Oswald({
@@ -51,7 +51,7 @@ export default function RootLayout({
       <body
         className={`${oswald.variable} ${roboto.variable} antialiased bg-gray-100 w-full max-w-[1920px] mx-auto`}
       >
-        <Header />
+        {/* <Header /> */}
         {children}
         <Footer />
       </body>

@@ -2,29 +2,22 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Link as ScrollLink } from 'react-scroll';
 
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import Link from 'next/link';
 
 const ContactsSection = () => {
   return (
     <section className="flex flex-col gap-6">
       <h2 className="visually-hidden">Contacts</h2>
-      <ScrollLink
-        to="hero"
-        offset={-100}
-        spy={true}
-        smooth={true}
-        duration={1000}
-        className="cursor-pointer"
-      >
+      <Link href="/">
         <Image
           src={'/assets/img/logo.png'}
           width={117}
           height={55}
           alt="icon fit physique"
         />
-      </ScrollLink>
+      </Link>
       <p className="text-sm/7 mobile:text-base/7 text-white/70">
         Fit Physical Pvt Ltd is for build and fitness body
       </p>
