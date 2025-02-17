@@ -78,7 +78,7 @@ const Classes = () => {
                   initial="hidden"
                   whileInView={'show'}
                   viewport={{ once: false, amount: 0.2 }}
-                  className="relative h3 text-white after:content-[''] before:w-5 before:h-5 before:bg-accent before:absolute before:-z-10 before:top-[5px] before:-left-[7px]"
+                  className="relative h3 text-white before:w-5 before:h-5 before:bg-accent before:absolute before:-z-10 before:top-[5px] before:-left-[7px]"
                 >
                   {item.name}
                 </motion.h3>
