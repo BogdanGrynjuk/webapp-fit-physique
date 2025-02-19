@@ -7,12 +7,15 @@ import TrainerCard from '@/app/components/TeamSection/TrainerCard';
 import { trainers } from '@/app/data/trainers';
 import SearchInput from '@/app/components/UI/SearchInput';
 import DropdownSelect from '@/app/components/UI/DropdownSelect';
+import CustomButton from '@/app/components/UI/CustomButton';
 
 const TrainersPage = () => {
   const [filteredTrainers, setFilteredTrainers] = useState(trainers);
-  const [selectedRole, setSelectedRole] = useState('All');
+  const [selectedRole, setSelectedRole] = useState('');
+  const [query, setQuery] = useState('');
 
-  const handleSearch = (query: string) => {
+  const handleSearch = (searchQuery: string) => {
+    setQuery(searchQuery);
     setFilteredTrainers(
       trainers.filter(
         ({ fullName, role }) =>
@@ -23,6 +26,7 @@ const TrainersPage = () => {
   };
 
   const handleRoleChange = (role: string) => {
+    setQuery('');
     setSelectedRole(role);
     setFilteredTrainers(
       trainers.filter(
@@ -31,6 +35,12 @@ const TrainersPage = () => {
           fullName.toLowerCase().includes(fullName.toLowerCase()),
       ),
     );
+  };
+
+  const handleFilterClear = () => {
+    setQuery('');
+    setSelectedRole('');
+    setFilteredTrainers(trainers);
   };
 
   return (
@@ -51,11 +61,13 @@ const TrainersPage = () => {
           placeholder="find trainer by name"
           onSearch={handleSearch}
           name={'trainer-name'}
+          searchQuery={query}
         />
 
         <DropdownSelect
           label={'specialization'}
-          placeholder="find trainer by specialization"
+          placeholder="filter trainers by specialization"
+          selectedOption={selectedRole}
           options={[
             'All',
             'Body Builder Coach',
@@ -68,22 +80,35 @@ const TrainersPage = () => {
           onSelect={handleRoleChange}
         />
 
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {filteredTrainers.map((trainer) => {
-            return (
-              <li key={trainer.id}>
-                <TrainerCard
-                  id={trainer.id}
-                  photo={trainer.photo}
-                  fullName={trainer.fullName}
-                  role={trainer.role}
-                  description={trainer.description}
-                  onlineProfile={trainer.onlineProfile}
-                />
-              </li>
-            );
-          })}
-        </ul>
+        {filteredTrainers.length > 0 ? (
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {filteredTrainers.map((trainer) => {
+              return (
+                <li key={trainer.id}>
+                  <TrainerCard
+                    id={trainer.id}
+                    photo={trainer.photo}
+                    fullName={trainer.fullName}
+                    role={trainer.role}
+                    description={trainer.description}
+                    onlineProfile={trainer.onlineProfile}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <div className="flex flex-col justify-center items-center gap-4">
+            <p className="text-accent text-xl font-semibold">
+              No trainers were found for your query.
+            </p>
+            <CustomButton
+              text={'reset'}
+              containerStyles={'w-[146px] h-[40px] md:w-[162px] md:h-[56px]'}
+              onClick={handleFilterClear}
+            />
+          </div>
+        )}
       </div>
     </section>
   );

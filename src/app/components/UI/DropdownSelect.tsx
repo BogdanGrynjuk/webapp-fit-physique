@@ -6,6 +6,7 @@ import { FaAngleDown } from 'react-icons/fa6';
 
 interface DropdownSelectProps {
   options: string[];
+  selectedOption: string;
   placeholder?: string;
   label?: string;
   onSelect: (selected: string) => void;
@@ -14,11 +15,12 @@ interface DropdownSelectProps {
 const DropdownSelect = ({
   options,
   placeholder,
+  selectedOption,
   label = 'Select an option',
   onSelect,
 }: DropdownSelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState(selectedOption);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const handleSelect = (option: string) => {
@@ -26,6 +28,10 @@ const DropdownSelect = ({
     setIsOpen(false);
     onSelect?.(option);
   };
+
+  useEffect(() => {
+    setSelected(selectedOption);
+  }, [selectedOption]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -41,7 +47,7 @@ const DropdownSelect = ({
   }, []);
 
   return (
-    <div ref={dropdownRef} className="relative min-w-[300px] group">
+    <div ref={dropdownRef} className="relative w-[280px] group">
       {label && (
         <span className="uppercase text-[12px] text-primary-100/50 tracking-[1px] font-semibold group-hover:text-accent group-focus-within:text-accent">
           {label}
@@ -50,9 +56,15 @@ const DropdownSelect = ({
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="relative flex w-full p-3 h-[40px] md:h-[56px] border border-primary-100/50 items-center justify-between"
+        className="bg-white relative flex w-full p-3 h-[40px] md:h-[56px] border border-primary-100/50 items-center justify-between"
       >
-        {selected ? <span>{selected}</span> : <span>{placeholder}</span>}
+        {selected ? (
+          <span>{selected}</span>
+        ) : (
+          <span className="text-sm mobile:text-base text-primary-100/50 font-medium capitalize">
+            {placeholder}
+          </span>
+        )}
         <FaAngleDown
           className={clsx(
             'transition-all duration-300',
@@ -78,7 +90,9 @@ const DropdownSelect = ({
             )}
             onClick={() => handleSelect(option)}
           >
-            <span>{option}</span>
+            <span className="text-sm mobile:text-base capitalize">
+              {option}
+            </span>
           </li>
         ))}
       </ul>
