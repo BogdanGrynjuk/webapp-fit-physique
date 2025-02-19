@@ -5,14 +5,31 @@ import React, { useState } from 'react';
 import TrainerCard from '@/app/components/TeamSection/TrainerCard';
 
 import { trainers } from '@/app/data/trainers';
-import SearchInput from '@/app/components/SearchInput/SearchInput';
+import SearchInput from '@/app/components/UI/SearchInput';
+import DropdownSelect from '@/app/components/UI/DropdownSelect';
 
 const TrainersPage = () => {
   const [filteredTrainers, setFilteredTrainers] = useState(trainers);
+  const [selectedRole, setSelectedRole] = useState('All');
 
   const handleSearch = (query: string) => {
     setFilteredTrainers(
-      trainers.filter(({ fullName }) => fullName.toLowerCase().includes(query)),
+      trainers.filter(
+        ({ fullName, role }) =>
+          fullName.toLowerCase().includes(query.toLowerCase()) &&
+          (selectedRole === 'All' || role.includes(selectedRole)),
+      ),
+    );
+  };
+
+  const handleRoleChange = (role: string) => {
+    setSelectedRole(role);
+    setFilteredTrainers(
+      trainers.filter(
+        ({ fullName, role: trainerRole }) =>
+          (role === 'All' || trainerRole.includes(role)) &&
+          fullName.toLowerCase().includes(fullName.toLowerCase()),
+      ),
     );
   };
 
@@ -34,6 +51,21 @@ const TrainersPage = () => {
           placeholder="find trainer by name"
           onSearch={handleSearch}
           name={'trainer-name'}
+        />
+
+        <DropdownSelect
+          label={'specialization'}
+          placeholder="find trainer by specialization"
+          options={[
+            'All',
+            'Body Builder Coach',
+            'Cardio Coach',
+            'CrossFit Coach',
+            'Fitness Coach',
+            'Boxing Coach',
+            'Yoga Coach',
+          ]}
+          onSelect={handleRoleChange}
         />
 
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">

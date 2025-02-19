@@ -46,7 +46,7 @@ export const trainers: Trainer[] = [
     id: '3',
     photo: '/assets/img/trainers/matt.jpg',
     fullName: 'Matt Stonie',
-    role: 'Crossfit Coach',
+    role: 'CrossFit Coach',
     description:
       'Designs high-intensity workouts to enhance agility, stamina, and functional strength.',
     onlineProfile: [
@@ -124,7 +124,7 @@ export const trainers: Trainer[] = [
     id: '9',
     photo: '/assets/img/trainers/pavel.jpg',
     fullName: 'Pavel Taylor',
-    role: 'Crossfit Coach',
+    role: 'CrossFit Coach',
     description:
       'Designs high-intensity workouts to enhance agility, stamina, and functional strength.',
     onlineProfile: [
