@@ -56,29 +56,31 @@ const TrainersPage = () => {
           will find the perfect solution for you!
         </p>
 
-        <SearchInput
-          label={'trainer name '}
-          placeholder="find trainer by name"
-          onSearch={handleSearch}
-          name={'trainer-name'}
-          searchQuery={query}
-        />
+        <div className="flex flex-col mobile:flex-row gap-4">
+          <SearchInput
+            label={'trainer name '}
+            placeholder="find trainer by name"
+            onSearch={handleSearch}
+            name={'trainer-name'}
+            searchQuery={query}
+          />
 
-        <DropdownSelect
-          label={'specialization'}
-          placeholder="filter trainers by specialization"
-          selectedOption={selectedRole}
-          options={[
-            'All',
-            'Body Builder Coach',
-            'Cardio Coach',
-            'CrossFit Coach',
-            'Fitness Coach',
-            'Boxing Coach',
-            'Yoga Coach',
-          ]}
-          onSelect={handleRoleChange}
-        />
+          <DropdownSelect
+            label={'specialization'}
+            placeholder="filter trainers"
+            selectedOption={selectedRole}
+            options={[
+              'All',
+              'Body Builder Coach',
+              'Cardio Coach',
+              'CrossFit Coach',
+              'Fitness Coach',
+              'Boxing Coach',
+              'Yoga Coach',
+            ]}
+            onSelect={handleRoleChange}
+          />
+        </div>
 
         {filteredTrainers.length > 0 ? (
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">

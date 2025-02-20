@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import React, { useState, useRef, useEffect } from 'react';
-import { FaAngleDown } from 'react-icons/fa6';
+import { FaAngleDown, FaFilter } from 'react-icons/fa6';
 
 interface DropdownSelectProps {
   options: string[];
@@ -56,8 +56,11 @@ const DropdownSelect = ({
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="bg-white relative flex w-full p-3 h-[40px] md:h-[56px] border border-primary-100/50 items-center justify-between"
+        className="bg-white relative flex w-full p-3 pl-[52px] md:pl-[68px] h-[40px] md:h-[56px] border border-primary-100/50 items-center justify-between"
       >
+        <div className=" text-white absolute top-0 left-0 w-[40px] md:w-[56px] h-full bg-accent flex items-center justify-center">
+          <FaFilter />
+        </div>
         {selected ? (
           <span>{selected}</span>
         ) : (
@@ -65,6 +68,7 @@ const DropdownSelect = ({
             {placeholder}
           </span>
         )}
+
         <FaAngleDown
           className={clsx(
             'transition-all duration-300',

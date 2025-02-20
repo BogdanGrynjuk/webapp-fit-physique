@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 interface SearchInputProps {
   label: string;
@@ -26,6 +27,12 @@ const SearchInput: React.FC<SearchInputProps> = ({
     }
   };
 
+  const handleButtonClick = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  };
+
   return (
     <div className="group w-[280px]">
       <label
@@ -34,16 +41,25 @@ const SearchInput: React.FC<SearchInputProps> = ({
       >
         {label}
       </label>
-      <input
-        type="text"
-        id={inputId}
-        name={name}
-        ref={inputRef}
-        value={searchQuery}
-        placeholder={placeholder}
-        onChange={handleChange}
-        className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50 text-sm mobile:text-base placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium placeholder:capitalize"
-      />
+      <div className="relative">
+        <input
+          type="text"
+          id={inputId}
+          name={name}
+          ref={inputRef}
+          value={searchQuery}
+          placeholder={placeholder}
+          onChange={handleChange}
+          className="p-3 pl-[52px] md:pl-[68px] w-full h-[40px] md:h-[56px] border border-primary-100/50 text-sm mobile:text-base placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium placeholder:capitalize outline-none"
+        />
+        <button
+          type="button"
+          onClick={handleButtonClick}
+          className="text-white absolute top-[1px] left-[1px] w-[38px] md:w-[54px] h-[38px] md:h-[54px] bg-accent flex items-center justify-center"
+        >
+          <FaSearch />
+        </button>
+      </div>
     </div>
   );
 };
