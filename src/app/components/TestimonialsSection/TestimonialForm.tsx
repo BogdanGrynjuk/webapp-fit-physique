@@ -30,7 +30,7 @@ const TestimonialForm = () => {
               type="text"
               placeholder="Write your testimonial..."
               disabled={!isUserActive}
-              className="p-3 w-[100%-100px] h-[40px] md:w-[320px] md:h-[56px] outline-none"
+              className="p-3 w-[100%-100px] h-[40px] md:w-[320px] md:h-[56px] outline-none placeholder:text-sm mobile:placeholder:text-base placeholder:capitalize placeholder:font-medium"
             />
             <motion.div
               variants={fadeIn('left', 0.4)}

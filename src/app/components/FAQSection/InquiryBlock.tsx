@@ -67,10 +67,10 @@ const InquiryBlock = () => {
             name
           </label>
           <input
-            className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50"
+            className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium placeholder:capitalize outline-none"
             type="text"
             id="name"
-            name="from_name"
+            name="name"
             placeholder="your name"
             value={formData.name}
             onChange={handleInputChange}
@@ -86,11 +86,11 @@ const InquiryBlock = () => {
             mail address
           </label>
           <input
-            className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50"
+            className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium outline-none"
             type="email"
             id="email"
-            name="from_email"
-            placeholder="example@gmail.com"
+            name="email"
+            placeholder="Example@gmail.com"
             value={formData.email}
             onChange={handleInputChange}
             required
@@ -105,7 +105,7 @@ const InquiryBlock = () => {
             message
           </label>
           <textarea
-            className="p-3 w-full h-auto lg:max-h-[264px] xl:max-h-[240px] border border-primary-100/50"
+            className="p-3 w-full h-auto lg:max-h-[264px] xl:max-h-[240px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium placeholder:capitalize outline-none"
             id="message"
             name="message"
             placeholder="message"

@@ -94,7 +94,7 @@ const CalculatorBMI = () => {
               placeholder="Your Weight in kg"
               value={weight}
               onChange={handleWeightChange}
-              className="p-3 w-[200px] h-[40px] md:w-[220px] md:h-[56px] border border-primary-100/50 text-center"
+              className="p-3 w-[200px] h-[40px] md:w-[220px] md:h-[56px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium text-center"
             />
             <span className="text-xs">Weight (up to 200 kg)</span>
           </div>
@@ -108,7 +108,7 @@ const CalculatorBMI = () => {
               placeholder="Your Height in cm"
               value={height}
               onChange={handleHeightChange}
-              className="p-3 w-[200px] h-[40px] md:w-[220px] md:h-[56px] border border-primary-100/50 text-center"
+              className="p-3 w-[200px] h-[40px] md:w-[220px] md:h-[56px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium text-center"
             />
             <span className="text-xs">Height (up to 220 cm)</span>
           </div>
