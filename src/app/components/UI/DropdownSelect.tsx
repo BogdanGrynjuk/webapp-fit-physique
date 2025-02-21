@@ -58,7 +58,7 @@ const DropdownSelect = ({
         onClick={() => setIsOpen((prev) => !prev)}
         className="bg-white relative flex w-full p-3 pl-[52px] md:pl-[68px] h-[40px] md:h-[56px] border border-primary-100/50 items-center justify-between"
       >
-        <div className=" text-white absolute top-0 left-0 w-[40px] md:w-[56px] h-full bg-accent flex items-center justify-center">
+        <div className="text-white absolute top-0 left-0 w-[40px] md:w-[56px] h-full bg-accent flex items-center justify-center">
           <FaFilter />
         </div>
         {selected ? (
@@ -82,10 +82,10 @@ const DropdownSelect = ({
           <li
             key={index}
             style={{
-              transition: `transform 0.5s ease-in-out ${(array.length - index) * 0.1}s, margin-bottom 0.2s ease-in-out ${(array.length - index) * 0.1}s, opacity 1s ease-in-out ${(array.length - index) * 0.1}s `,
+              transition: `transform 0.5s ease-in-out ${(array.length - index) * 0.1}s, margin-bottom 0.2s ease-in-out ${(array.length - index) * 0.1}s, opacity 1s ease-in-out ${(array.length - index) * 0.1}s, padding-left 0.3s ease-in-out`,
             }}
             className={clsx(
-              'p-3 h-[40px] md:h-[56px] bg-white border-r border-l border-primary-100/50 hover:bg-red-100 cursor-pointer ',
+              'p-3 h-[40px] md:h-[56px] bg-white border-r border-l border-primary-100/50 hover:bg-red-100 hover:pl-5 hover:font-semibold flex items-center cursor-pointer ',
               isOpen
                 ? 'translate-y-[0] mb-[0] opacity-100 scale-100'
                 : 'origin-bottom translate-y-[-48px] md:translate-y-[-64px] mb-[-40px] md:mb-[-56px] scale-0 opacity-0',
