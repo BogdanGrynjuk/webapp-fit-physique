@@ -38,14 +38,19 @@ const TrainerPage = () => {
         <div className="container mx-auto">
           {trainer && (
             <>
-              <h1>{trainer.fullName}</h1>
+              <h1 className="h1 text-center">{trainer.fullName}</h1>
               <Image
                 src={trainer.photo}
                 alt={trainer.fullName}
                 width={628}
                 height={560}
               />
-              <p>{trainer.description}</p>
+              <p>description: {trainer.description}</p>
+              <p>role: {trainer.role}</p>
+              <p>experience: {trainer.experience}</p>
+              <p>certificates: {trainer.certificates?.join(', ')}</p>
+              <p>achievements: {trainer.achievements?.join(', ')}</p>
+              <p>rating: {trainer.rating}</p>
             </>
           )}
         </div>
