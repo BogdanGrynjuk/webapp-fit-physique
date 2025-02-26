@@ -51,3 +51,32 @@ export const scale = (delay: number) => {
     },
   };
 };
+
+export const expandWidth = {
+  hidden: {
+    width: 0,
+  },
+  show: {
+    width: '20%',
+    transition: {
+      type: 'tween',
+      delay: 0.5,
+      duration: 0.3,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+export const rotateY = {
+  hidden: {
+    rotateY: 90,
+  },
+  show: {
+    rotateY: 0,
+    transition: {
+      type: 'tween',
+      duration: 0.5,
+      ease: 'easeInOut',
+    },
+  },
+};

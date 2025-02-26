@@ -133,3 +133,12 @@ nav .active {
 .pswp__icn {
   @apply fill-white static;
 }
+
+@layer utilities {
+  .rotate-y-90 {
+    transform: rotateY(90deg);
+  }
+  .rotate-y-0 {
+    transform: rotateY(0deg);
+  }
+}
