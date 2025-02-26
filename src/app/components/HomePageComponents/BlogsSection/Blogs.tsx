@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
 import BlogsSlider from './BlogsSlider';
-import CustomButton from '../UI/CustomButton';
+import CustomButton from '../../UI/CustomButton';
 import { useRouter } from 'next/navigation';
 
 const Blogs = () => {

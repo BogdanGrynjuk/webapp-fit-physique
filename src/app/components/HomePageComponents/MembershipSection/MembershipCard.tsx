@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconType } from 'react-icons';
 
-import CustomButton from '../UI/CustomButton';
+import CustomButton from '../../UI/CustomButton';
 
 type Benefit = {
   Icon: IconType;

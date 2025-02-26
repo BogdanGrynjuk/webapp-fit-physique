@@ -10,7 +10,7 @@ import BlogsSection from './BlogsSection';
 import GallerySection from './GallerySection';
 import NewsletterSection from './NewsletterSection';
 
-import SocialLink from '../UI/SocialLink';
+import SocialLink from '../../UI/SocialLink';
 import { FaFacebookF, FaXTwitter, FaYoutube } from 'react-icons/fa6';
 
 const Footer = () => {

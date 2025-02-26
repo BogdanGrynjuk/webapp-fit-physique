@@ -1,8 +1,8 @@
-interface Photo {
+type Photo = {
   id: string;
   src: string;
   alt: string;
-}
+};
 
 export const photoGallery: Photo[] = [
   {

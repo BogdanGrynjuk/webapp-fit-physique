@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
-import CustomButton from '../UI/CustomButton';
+import CustomButton from '../../UI/CustomButton';
 
 const InquiryBlock = () => {
   const [formData, setFormData] = useState({

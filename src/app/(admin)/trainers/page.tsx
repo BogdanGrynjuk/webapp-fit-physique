@@ -6,11 +6,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
-import TrainerCard from '@/app/components/TeamSection/TrainerCard';
+import TrainerCard from '@/app/components/HomePageComponents/TeamSection/TrainerCard';
 import SearchInput from '@/app/components/UI/SearchInput';
 import DropdownSelect from '@/app/components/UI/DropdownSelect';
 import CustomButton from '@/app/components/UI/CustomButton';
-import Header from './components/Header';
+import Header from '../../components/TrainersPageComponents/Header';
 
 import { trainers } from '@/app/data/trainers';
 

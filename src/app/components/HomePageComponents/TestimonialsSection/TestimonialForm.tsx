@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import CustomButton from '../UI/CustomButton';
+import CustomButton from '../../UI/CustomButton';
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';

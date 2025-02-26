@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import CustomButton from '../UI/CustomButton';
+import CustomButton from '../../UI/CustomButton';
 
 const NewsletterSection = () => {
   const [formData, setFormData] = useState({

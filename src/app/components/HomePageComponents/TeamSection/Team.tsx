@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from 'react';
 
 import { motion } from 'framer-motion';
-import { fadeIn } from '../../lib/variants';
+import { fadeIn } from '../../../lib/variants';
 
 import TrainerCard from './TrainerCard';
-import CustomButton from '../UI/CustomButton';
+import CustomButton from '../../UI/CustomButton';
 import { Trainer, trainers } from '@/app/data/trainers';
 import { useRouter } from 'next/navigation';
 

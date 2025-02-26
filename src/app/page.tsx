@@ -1,15 +1,15 @@
-import Hero from './components/HeroSection';
-import About from './components/AboutUsSection';
-import Classes from './components/ClassesSection';
-import Team from './components/TeamSection';
-import Membership from './components/MembershipSection';
-import Testimonials from './components/TestimonialsSection';
-import Faq from './components/FAQSection/Faq';
-import Blogs from './components/BlogsSection';
-import Brands from './components/PartnersSection';
-import Header from './components/Header';
+import Hero from './components/HomePageComponents/HeroSection';
+import About from './components/HomePageComponents/AboutUsSection';
+import Classes from './components/HomePageComponents/ClassesSection';
+import Team from './components/HomePageComponents/TeamSection';
+import Membership from './components/HomePageComponents/MembershipSection';
+import Testimonials from './components/HomePageComponents/TestimonialsSection';
+import Faq from './components/HomePageComponents/FAQSection/Faq';
+import Blogs from './components/HomePageComponents/BlogsSection';
+import Brands from './components/HomePageComponents/PartnersSection';
+import Header from './components/HomePageComponents/Header';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Header />
@@ -26,4 +26,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;

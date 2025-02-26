@@ -4,9 +4,9 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import CustomButton from '../UI/CustomButton';
+import CustomButton from '../../UI/CustomButton';
 
-import { fadeIn } from '../../lib/variants';
+import { fadeIn } from '../../../lib/variants';
 
 const classes = [
   {

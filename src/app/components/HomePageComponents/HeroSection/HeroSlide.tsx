@@ -4,9 +4,9 @@ import React from 'react';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-import CustomButton from '../UI/CustomButton';
+import CustomButton from '../../UI/CustomButton';
 
-import { fadeIn } from '../../lib/variants';
+import { fadeIn } from '../../../lib/variants';
 
 const HeroSlide = ({
   title,

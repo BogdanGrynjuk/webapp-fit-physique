@@ -3,9 +3,14 @@
 import Image from 'next/image';
 import React from 'react';
 
-import SocialLink from '../UI/SocialLink';
+import SocialLink from '../../UI/SocialLink';
 import { Trainer } from '@/app/data/trainers';
 import Link from 'next/link';
+
+type TrainerCardProps = Pick<
+  Trainer,
+  'id' | 'photo' | 'fullName' | 'role' | 'description' | 'onlineProfile'
+>;
 
 const TrainerCard = ({
   id,
@@ -14,7 +19,7 @@ const TrainerCard = ({
   role,
   description,
   onlineProfile,
-}: Trainer) => {
+}: TrainerCardProps) => {
   return (
     <div className="text-center">
       <Link href={`/trainers/${id}`} className=" group">

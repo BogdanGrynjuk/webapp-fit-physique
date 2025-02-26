@@ -6,20 +6,20 @@ type OnlineProfile = {
   href: string;
 };
 
-export interface Trainer {
+export type Trainer = {
   id: string;
   photo: string;
   fullName: string;
   role: string;
   description: string;
   onlineProfile: OnlineProfile[];
-  age?: number;
-  specialty?: string;
-  experience?: string;
-  pricePerSession?: number;
-  certificates?: string[];
-  rating?: number;
-}
+  age: number;
+  specialty: string;
+  experience: string;
+  pricePerSession: number;
+  certificates: string[];
+  rating: number;
+};
 
 export const trainers: Trainer[] = [
   {

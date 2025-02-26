@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import BlogCard from './BlogCard';
-import SwiperNavButtons from '../UI/SwiperNavButtons';
+import SwiperNavButtons from '../../UI/SwiperNavButtons';
 
 import { blogsList } from '@/app/data/blogs';
 

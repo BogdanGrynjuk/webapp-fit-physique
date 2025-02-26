@@ -1,9 +1,9 @@
-interface Blog {
+type Blog = {
   id: string;
   img: string;
   date: string;
   title: string;
-}
+};
 
 export const blogsList: Blog[] = [
   {

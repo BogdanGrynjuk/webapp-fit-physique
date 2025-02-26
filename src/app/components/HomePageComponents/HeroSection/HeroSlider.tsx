@@ -8,7 +8,7 @@ import 'swiper/css';
 // import 'swiper/css/navigation';
 
 import HeroSlide from './HeroSlide';
-import SwiperNavButtons from '../UI/SwiperNavButtons';
+import SwiperNavButtons from '../../UI/SwiperNavButtons';
 
 const slides = [
   {
