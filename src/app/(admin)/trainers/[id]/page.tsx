@@ -56,29 +56,36 @@ const DetailedTrainerPage = () => {
                 {trainer.fullName}
               </motion.h1>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className=" md:col-start-2 md:row-start-1">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-y-4 gap-x-8">
+                <div className="md:col-start-1 md:row-start-1 xl:col-start-1 xl:row-start-1">
+                  <TrainerInfo
+                    role={trainer.role}
+                    description={trainer.description}
+                  />
+                </div>
+
+                <div className="md:col-start-2 md:row-start-1 md:row-span-2 xl:col-start-2 xl:row-span-4">
                   <TrainerImg
                     photo={trainer.photo}
                     fullName={trainer.fullName}
                     rating={trainer.rating}
                   />
                 </div>
-                <div className="md:col-start-1 md:row-start-1">
-                  <TrainerInfo
-                    role={trainer.role}
-                    description={trainer.description}
-                  />
 
+                <div className="md:col-start-1 md:row-start-2 xl:col-start-1 xl:row-start-2">
                   <TrainerDetails
                     age={trainer.age}
                     experience={trainer.experience}
                     specialty={trainer.specialty}
                     onlineProfile={trainer.onlineProfile}
                   />
+                </div>
 
+                <div className="md:col-start-1 md:row-start-3 xl:col-start-1 xl:row-start-3">
                   <TrainerCertificates certificates={trainer.certificates} />
+                </div>
 
+                <div className="md:col-start-2 md:row-start-3 xl:col-start-1 xl:row-start-4">
                   <TrainerPricing pricePerSession={trainer.pricePerSession} />
                 </div>
               </div>

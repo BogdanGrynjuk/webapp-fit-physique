@@ -1,7 +1,6 @@
 import React from 'react';
 
 import SocialLink from '@/app/components/UI/SocialLink';
-import { FaFacebookF, FaXTwitter, FaYoutube } from 'react-icons/fa6';
 import { Trainer } from '@/app/data/trainers';
 
 type TrainerDetailsProps = Pick<
