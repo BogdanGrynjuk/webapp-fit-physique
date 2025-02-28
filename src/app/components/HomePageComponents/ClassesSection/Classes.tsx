@@ -2,52 +2,18 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+
 import { motion } from 'framer-motion';
+import { fadeIn } from '@/app/lib/variants';
 
-import CustomButton from '../../UI/CustomButton';
+import CustomButton from '@/app/components/UI/CustomButton';
 
-import { fadeIn } from '../../../lib/variants';
-
-const classes = [
-  {
-    name: 'body building',
-    img: '/assets/img/classes/bodybuilding.jpg',
-    description:
-      'Develop strength, endurance, and muscle growth with intense weightlifting and resistance training sessions.',
-  },
-  {
-    name: 'cardio',
-    img: '/assets/img/classes/cardio.jpg',
-    description:
-      'Boost stamina, burn calories, and improve heart health with dynamic and high-energy cardio workouts.',
-  },
-  {
-    name: 'fitness',
-    img: '/assets/img/classes/fitness.jpg',
-    description:
-      'Enhance flexibility, build core strength, and stay active with engaging full-body fitness routines.',
-  },
-  {
-    name: 'crossfit',
-    img: '/assets/img/classes/crossfit.jpg',
-    description:
-      'Challenge your endurance, agility, and power through high-intensity, functional, and explosive workouts.',
-  },
-  {
-    name: 'boxing',
-    img: '/assets/img/classes/boxing.jpg',
-    description:
-      'Develop endurance, punching power, and reaction speed with intense boxing workouts.',
-  },
-  {
-    name: 'yoga',
-    img: '/assets/img/classes/yoga.jpg',
-    description:
-      'Restore balance, strengthen muscles, and improve flexibility with a calming yoga practice.',
-  },
-];
+import { classList } from '@/app/data/classes';
 
 const Classes = () => {
+  const router = useRouter();
+
   return (
     <section id="classes">
       <h2 className="visually-hidden">Classes</h2>
@@ -58,7 +24,7 @@ const Classes = () => {
         viewport={{ once: false, amount: 0.05 }}
         className="grid grid-cols-1 lg:grid-cols-2"
       >
-        {classes.map((item, index) => {
+        {classList.map((item, index) => {
           return (
             <li
               key={index}
@@ -102,6 +68,7 @@ const Classes = () => {
                     containerStyles={
                       'w-[146px] h-[40px] md:w-[162px] md:h-[56px]'
                     }
+                    onClick={() => router.push(`/${item.slug}`)}
                   />
                 </motion.div>
               </div>
