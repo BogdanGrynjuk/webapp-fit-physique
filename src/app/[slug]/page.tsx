@@ -2,49 +2,51 @@
 
 import React, { useEffect } from 'react';
 import { notFound, useParams } from 'next/navigation';
-import { classList } from '@/app//data/classes';
+import { ClassItem, classList } from '@/app//data/classes';
 import Header from '../components/ClassDetailPageComponents/Header';
 import Image from 'next/image';
+import ClassInfo from '../components/ClassDetailPageComponents/ClassInfo';
+import ClassBenefits from '../components/ClassDetailPageComponents/ClassBenefits';
+import ClassTraining from '../components/ClassDetailPageComponents/ClassTraining';
+import ClassEquipment from '../components/ClassDetailPageComponents/ClassEquipment';
 
 const ClassDetailPage = () => {
   const params = useParams();
+  const navLinks = [{ name: 'home', href: '/#classes' }];
 
-  const selectedClass = classList.find(
+  const selectedClass: ClassItem | undefined = classList.find(
     (selectedClass) => selectedClass.slug === params.slug,
   );
 
   useEffect(() => {
-    if (!selectedClass?.slug || !selectedClass) {
+    if (!selectedClass || !selectedClass.slug) {
       notFound();
     }
-  }, [selectedClass?.slug, selectedClass]);
+  }, [selectedClass, selectedClass?.slug]);
 
-  const navLinks = [{ name: 'home', href: '/#classes' }];
-
-  if (selectedClass) {
-    navLinks.push({
-      name: `class ${selectedClass.name} `,
-      href: `/${selectedClass.slug}`,
-    });
+  if (!selectedClass) {
+    return <div>Loading...</div>;
   }
+
+  const { img, name, slug, details } = selectedClass;
+  const { about, benefits, trainingFormats, equipment } = details;
+
+  navLinks.push({
+    name: `class ${name} `,
+    href: `/${slug}`,
+  });
 
   return (
     <>
       <Header navLinks={navLinks} />
       <main className="mt-[100px] pt-8 pb-8 lg:pt-14 lg:pb-14">
         <div className="container mx-auto flex flex-col gap-8 items-center">
-          {selectedClass && (
-            <>
-              <h1>{selectedClass.name}</h1>
-              <p>{selectedClass.description}</p>
-              <Image
-                src={selectedClass.img}
-                alt={selectedClass.slug}
-                width={960}
-                height={485}
-              />
-            </>
-          )}
+          <Image src={img} alt={slug} width={960} height={485} />
+
+          <ClassInfo about={about} />
+          <ClassBenefits benefits={benefits} />
+          <ClassTraining trainingFormats={trainingFormats} />
+          <ClassEquipment equipment={equipment} />
         </div>
       </main>
     </>
