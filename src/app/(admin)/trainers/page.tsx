@@ -21,7 +21,7 @@ const navLinks = [
 
 const roleOptions = [
   'All Trainers',
-  'Body Builder Coaches',
+  'Bodybuilding Coaches',
   'Cardio Coaches',
   'CrossFit Coaches',
   'Fitness Coaches',
@@ -30,12 +30,12 @@ const roleOptions = [
 ];
 
 const roleMapping: Record<string, string> = {
-  'Body Builder Coaches': 'Body Builder Coach',
-  'Cardio Coaches': 'Cardio Coach',
-  'CrossFit Coaches': 'CrossFit Coach',
-  'Fitness Coaches': 'Fitness Coach',
-  'Boxing Coaches': 'Boxing Coach',
-  'Yoga Coaches': 'Yoga Coach',
+  'Bodybuilding Coaches': 'Bodybuilding',
+  'Cardio Coaches': 'Cardio',
+  'CrossFit Coaches': 'CrossFit',
+  'Fitness Coaches': 'Fitness',
+  'Boxing Coaches': 'Boxing',
+  'Yoga Coaches': 'Yoga',
 };
 
 const TrainersPage = () => {

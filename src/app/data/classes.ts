@@ -26,15 +26,15 @@ export type ClassItem = {
 
 export const classList: ClassItem[] = [
   {
-    name: 'body building',
+    name: 'bodybuilding',
     img: '/assets/img/classes/bodybuilding.jpg',
     description:
       'Develop strength, endurance, and muscle growth with intense weightlifting and resistance training sessions.',
-    slug: 'class-body-building',
+    slug: 'bodybuilding-class',
     details: {
       about: {
-        title: 'What is a Bodybuilding class?',
-        img: '/assets/img/details/bodybuilding-about.jpg',
+        title: 'bodybuilding class',
+        img: '/assets/img/classes/bodybuilding-about.jpg',
         text: 'Bodybuilding is a strength-focused training method aimed at muscle hypertrophy and sculpting an athletic physique. At FitPhysique, our bodybuilding program is designed for both beginners and experienced athletes looking to enhance their strength and endurance through structured weightlifting routines.',
       },
       benefits: {
@@ -78,11 +78,11 @@ export const classList: ClassItem[] = [
     img: '/assets/img/classes/cardio.jpg',
     description:
       'Boost stamina, burn calories, and improve heart health with dynamic and high-energy cardio workouts.',
-    slug: 'class-cardio',
+    slug: 'cardio-class',
     details: {
       about: {
-        title: 'What is a cardio class?',
-        img: '/assets/img/details/cardio-about.jpg',
+        title: 'cardio  class',
+        img: '/assets/img/classes/cardio-about.jpg',
         text: 'Cardio workouts focus on improving heart health, endurance, and overall fitness. These sessions involve high-intensity movements that keep your heart rate elevated, making them perfect for weight loss and cardiovascular conditioning. At FitPhysique, our cardio classes are designed for all fitness levels, helping you stay active, burn calories, and feel energized throughout the day.',
       },
       benefits: {
@@ -121,6 +121,7 @@ export const classList: ClassItem[] = [
       },
     },
   },
+
   {
     name: 'fitness',
     img: '/assets/img/classes/fitness.jpg',
@@ -129,8 +130,8 @@ export const classList: ClassItem[] = [
     slug: 'class-fitness',
     details: {
       about: {
-        title: 'What is a fitness class?',
-        img: '/assets/img/details/fitness-about.jpg',
+        title: 'fitness  class',
+        img: '/assets/img/classes/fitness-about.jpg',
         text: 'Fitness training is a universal way to improve overall physical health, flexibility, and endurance. At FitPhysique, we offer structured workouts for all levels, helping individuals achieve their fitness goals, whether they want to lose weight, build muscle, or simply maintain an active lifestyle.',
       },
       benefits: {
@@ -168,16 +169,17 @@ export const classList: ClassItem[] = [
       },
     },
   },
+
   {
     name: 'crossFit',
     img: '/assets/img/classes/crossFit.jpg',
     description:
       'Challenge your endurance, agility, and power through high-intensity, functional, and explosive workouts.',
-    slug: 'class-cross-fit',
+    slug: 'crossFit-class',
     details: {
       about: {
-        title: 'What is a CrossFit class?',
-        img: '/assets/img/details/crossFit-about.jpg',
+        title: 'crossFit class',
+        img: '/assets/img/classes/crossFit-about.jpg',
         text: 'CrossFit is a high-intensity training system that combines strength exercises, endurance training, and functional movements. At FitPhysique, our CrossFit classes are designed for all fitness levels, offering scalable workouts that push your limits while improving overall athleticism.',
       },
       benefits: {
@@ -215,16 +217,17 @@ export const classList: ClassItem[] = [
       },
     },
   },
+
   {
     name: 'boxing',
     img: '/assets/img/classes/boxing.jpg',
     description:
       'Develop endurance, punching power, and reaction speed with intense boxing workouts.',
-    slug: 'class-boxing',
+    slug: 'boxing-class',
     details: {
       about: {
-        title: 'What is a boxing class?',
-        img: '/assets/img/details/boxing-about.jpg',
+        title: 'boxing  class',
+        img: '/assets/img/classes/boxing-about.jpg',
         text: 'Boxing is not just a martial art but a universal sport that trains endurance and builds confidence. It can be practiced at any age, so both adults and children actively attend training. The boxing section at FitPhysique attracts both men and women. For men, it is an opportunity to believe in their strength, overcome fears, and improve physical fitness. For women, training is a way to take care of their figure and acquire self-defense skills.',
       },
       benefits: {
@@ -262,16 +265,17 @@ export const classList: ClassItem[] = [
       },
     },
   },
+
   {
     name: 'yoga',
     img: '/assets/img/classes/yoga.jpg',
     description:
       'Restore balance, strengthen muscles, and improve flexibility with a calming yoga practice.',
-    slug: 'class-yoga',
+    slug: 'yoga-class',
     details: {
       about: {
-        title: 'What is a Yoga class?',
-        img: '/assets/img/details/yoga-about.jpg',
+        title: 'yoga class',
+        img: '/assets/img/classes/yoga-about.jpg',
         text: 'Yoga is an ancient practice that combines physical postures, breathing techniques, and meditation to promote overall well-being. At FitPhysique, our yoga classes are designed to help you relax, improve flexibility, and strengthen both body and mind.',
       },
       benefits: {

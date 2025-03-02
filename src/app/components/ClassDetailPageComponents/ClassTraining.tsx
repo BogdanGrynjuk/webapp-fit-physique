@@ -7,7 +7,7 @@ type ClassTrainingProps = {
 const ClassTraining = ({ trainingFormats }: ClassTrainingProps) => {
   const { title, text, formats } = trainingFormats;
   return (
-    <section className="w-full">
+    <section>
       <h2>{title}</h2>
       <p>{text}</p>
 

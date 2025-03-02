@@ -38,7 +38,7 @@ const TrainerCard = ({
           {fullName}
         </h4>
         <p className="font-roboto font-semibold text-primary-100/50 tracking-[2px] uppercase max-w-[300px] mx-auto mb-2">
-          {role}
+          {role} coach
         </p>
         <p className="font-roboto text-sm mobile:text-base lg:text-sm xl:text-base max-w-[300px] mx-auto mb-4">
           {description}
