@@ -27,7 +27,7 @@ const ClassInfo = ({ about }: ClassInfoProps) => {
       </div>
 
       <div className="container mx-auto mt-4">
-        <p className="text-sm mobile:text-base text-center max-w-[700px] mx-auto">
+        <p className="text-sm mobile:text-base text-center max-w-[850px] mx-auto">
           {text}
         </p>
       </div>
