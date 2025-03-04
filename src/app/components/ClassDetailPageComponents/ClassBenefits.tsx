@@ -11,16 +11,16 @@ const ClassBenefits = ({ benefits }: ClassBenefitsProps) => {
 
   return (
     <section className="w-full">
-      <div className="container mx-auto grid gap-4 xl:gap-8 sm:grid-cols-2">
-        <h2 className="h2 text-center sm:col-span-2 xl:col-start-2 xl:row-start-1">
+      <div className="container mx-auto grid gap-4 xl:gap-8 md:grid-cols-2">
+        <h2 className="h2 text-center md:col-span-2 xl:col-start-2 xl:row-start-1">
           {title}
         </h2>
 
-        <p className="text-sm mobile:text-base sm:col-start-2 sm:row-start-2 lg:col-start-1 lg:col-span-2 xl:col-start-2 xl:row-start-2 self-center xl:self-start">
+        <p className="text-sm mobile:text-base md:col-start-2 md:row-start-2 lg:col-start-1 lg:col-span-2 xl:col-start-2 xl:row-start-2 self-center xl:self-start">
           {text}
         </p>
 
-        <div className="w-full aspect-[1280/850] sm:col-start-1 sm:row-start-2 lg:col-start-1 lg:row-start-3 xl:col-start-1 xl:row-span-3 self-center ">
+        <div className="w-full aspect-[1280/850] md:col-start-1 md:row-start-2 lg:col-start-1 lg:row-start-3 xl:col-start-1 xl:row-span-3 self-center ">
           <Image
             src={img}
             alt={title}
@@ -31,7 +31,7 @@ const ClassBenefits = ({ benefits }: ClassBenefitsProps) => {
         </div>
 
         {points && (
-          <div className="flex flex-col gap-2 sm:col-span-2 lg:col-start-2 lg:col-span-1 xl:col-start-2 xl:row-start-3 self-center xl:self-start">
+          <div className="flex flex-col gap-2 md:col-span-2 lg:col-start-2 lg:col-span-1 xl:col-start-2 xl:row-start-3 self-center xl:self-start">
             <h5 className="h5">What will you get from the classes?</h5>
             <ul className="flex flex-col gap-2 ">
               {points.map((point, index) => (

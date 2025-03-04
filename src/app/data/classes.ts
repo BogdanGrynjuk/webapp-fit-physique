@@ -20,7 +20,7 @@ export type ClassItem = {
     about: ClassDetails;
     benefits: ClassDetails;
     trainingFormats: ClassDetails;
-    equipment: ClassDetails;
+    equipment: Omit<ClassDetails, 'img'>;
   };
 };
 
@@ -67,7 +67,6 @@ export const classList: ClassItem[] = [
       },
       equipment: {
         title: 'Infrastructure and Equipment',
-        img: '/assets/img/details/bodybuilding-equipment.jpg',
         text: 'FitPhysique offers a fully equipped gym with top-tier weightlifting machines, free weights, squat racks, benches, and resistance bands. We provide a motivating environment for effective muscle-building workouts, with professional trainers available for guidance and support.',
       },
     },
@@ -116,7 +115,6 @@ export const classList: ClassItem[] = [
       },
       equipment: {
         title: 'Infrastructure and Equipment',
-        img: '/assets/img/details/cardio-equipment.jpg',
         text: 'The FitPhysique sports complex offers a fully equipped cardio training area with treadmills, stationary bikes, jump ropes, and resistance bands. Our spacious workout zone allows for high-intensity interval training, circuit workouts, and endurance-focused exercises. Lockers and changing rooms are available for your convenience.',
       },
     },
@@ -164,7 +162,6 @@ export const classList: ClassItem[] = [
       },
       equipment: {
         title: 'Infrastructure and Equipment',
-        img: '/assets/img/details/fitness-equipment.jpg',
         text: 'The FitPhysique gym is equipped with state-of-the-art facilities, including resistance machines, free weights, yoga mats, and functional training areas. Members have access to treadmills, exercise bikes, and dedicated zones for stretching and recovery.',
       },
     },
@@ -212,7 +209,6 @@ export const classList: ClassItem[] = [
       },
       equipment: {
         title: 'Infrastructure and Equipment',
-        img: '/assets/img/details/crossFit-equipment.jpg',
         text: 'Our CrossFit box at FitPhysique is fully equipped with barbells, kettlebells, battle ropes, rowing machines, and gymnastic rings. The facility includes open workout areas, weightlifting platforms, and conditioning zones to support a full range of functional fitness training.',
       },
     },
@@ -260,7 +256,6 @@ export const classList: ClassItem[] = [
       },
       equipment: {
         title: 'Infrastructure and Equipment',
-        img: '/assets/img/details/boxing-equipment.jpg',
         text: 'The FitPhysique sports complex is a well-equipped training area. We have not only rings but also areas for warm-ups and relaxation. Each athlete has access to punching bags, gloves, and mitts. You will need gear such as mouthguards, helmets, hand wraps, and comfortable shoes that provide good foot support. We also have lockers and safes where you can store your belongings.',
       },
     },
@@ -308,7 +303,6 @@ export const classList: ClassItem[] = [
       },
       equipment: {
         title: 'Infrastructure and Equipment',
-        img: '/assets/img/details/yoga-equipment.jpg',
         text: 'Our yoga studio at FitPhysique provides a peaceful and comfortable atmosphere with yoga mats, blocks, straps, and meditation cushions available for use. The space is designed to enhance relaxation and mindfulness for a fulfilling practice.',
       },
     },

@@ -9,8 +9,8 @@ const ClassTraining = ({ trainingFormats }: ClassTrainingProps) => {
   const { title, text, formats, img } = trainingFormats;
   return (
     <section className="w-full">
-      <div className="container mx-auto grid gap-4 xl:gap-8 sm:grid-cols-2">
-        <h2 className="h2 text-center sm:col-span-2 xl:col-start-1 xl:row-start-1 xl:col-span-1">
+      <div className="container mx-auto grid gap-4 xl:gap-8 md:grid-cols-2">
+        <h2 className="h2 text-center md:col-span-2 xl:col-start-1 xl:row-start-1 xl:col-span-1">
           {title}
         </h2>
 
@@ -29,7 +29,7 @@ const ClassTraining = ({ trainingFormats }: ClassTrainingProps) => {
         </div>
 
         {formats && (
-          <div className="flex flex-col gap-2 sm:col-span-2 lg:col-start-1 lg:col-span-1 xl:col-start-1 xl:row-start-3 self-center xl:self-start">
+          <div className="flex flex-col gap-2 md:col-span-2 lg:col-start-1 lg:col-span-1 xl:col-start-1 xl:row-start-3 self-center xl:self-start">
             <ul className="flex flex-col gap-4 ">
               {formats.map((item, index) => (
                 <li key={index}>

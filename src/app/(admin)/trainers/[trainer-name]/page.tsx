@@ -26,8 +26,6 @@ const DetailedTrainerPage = () => {
   );
   const trainer = trainers.find((trainer) => trainer.fullName === trainerName);
 
-  console.log(params['trainer-name']);
-
   useEffect(() => {
     if (!params['trainer-name'] || !trainer) {
       notFound();

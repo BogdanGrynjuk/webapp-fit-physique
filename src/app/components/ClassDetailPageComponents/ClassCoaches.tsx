@@ -13,22 +13,24 @@ const ClassCoaches = ({ classTitle, slug }: ClassCoachesProps) => {
   );
 
   return (
-    <section>
-      <h2>Trainers</h2>
-      <ul>
-        {filteredTrainers.map((trainer) => (
-          <li key={trainer.id}>
-            <TrainerCard
-              role={trainer.role}
-              fullName={trainer.fullName}
-              photo={trainer.photo}
-              description={trainer.description}
-              onlineProfile={trainer.onlineProfile}
-              href={`/${slug}/${trainer.fullName}`}
-            />
-          </li>
-        ))}
-      </ul>
+    <section className="w-full">
+      <div className="container mx-auto flex flex-col gap-4 xl:gap-8">
+        <h2 className="h2 text-center">Trainers</h2>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto">
+          {filteredTrainers.map((trainer) => (
+            <li key={trainer.id}>
+              <TrainerCard
+                role={trainer.role}
+                fullName={trainer.fullName}
+                photo={trainer.photo}
+                description={trainer.description}
+                onlineProfile={trainer.onlineProfile}
+                href={`/${slug}/${trainer.fullName}`}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };

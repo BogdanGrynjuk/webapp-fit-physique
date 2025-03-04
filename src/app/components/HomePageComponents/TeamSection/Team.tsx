@@ -58,7 +58,6 @@ const Team = () => {
           {randomTrainers.map((trainer, index) => (
             <li key={index}>
               <TrainerCard
-                id={trainer.id}
                 photo={trainer.photo}
                 fullName={trainer.fullName}
                 role={trainer.role}

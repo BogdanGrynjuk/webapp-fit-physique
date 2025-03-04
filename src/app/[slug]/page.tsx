@@ -22,7 +22,7 @@ const ClassDetailPage = () => {
     if (!selectedClass || !selectedClass.slug) {
       notFound();
     }
-  }, [selectedClass, selectedClass?.slug]);
+  }, [selectedClass]);
 
   if (!selectedClass) {
     return <div>Loading...</div>;
@@ -43,8 +43,8 @@ const ClassDetailPage = () => {
         <ClassInfo about={about} />
         <ClassBenefits benefits={benefits} />
         <ClassTraining trainingFormats={trainingFormats} />
-        <ClassEquipment equipment={equipment} />
         <ClassCoaches classTitle={name} slug={slug} />
+        <ClassEquipment equipment={equipment} />
       </main>
     </>
   );
