@@ -44,7 +44,7 @@ const ClassDetailPage = () => {
         <ClassBenefits benefits={benefits} />
         <ClassTraining trainingFormats={trainingFormats} />
         <ClassEquipment equipment={equipment} />
-        <ClassCoaches classTitle={name} />
+        <ClassCoaches classTitle={name} slug={slug} />
       </main>
     </>
   );

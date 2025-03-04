@@ -19,13 +19,20 @@ import CustomButton from '@/app/components/UI/CustomButton';
 
 const DetailedTrainerPage = () => {
   const params = useParams();
-  const trainer = trainers.find((trainer) => trainer.id === params.id);
+  const trainerName = decodeURIComponent(
+    Array.isArray(params['trainer-name'])
+      ? params['trainer-name'][0]
+      : (params['trainer-name'] ?? ''),
+  );
+  const trainer = trainers.find((trainer) => trainer.fullName === trainerName);
+
+  console.log(params['trainer-name']);
 
   useEffect(() => {
-    if (!params.id || !trainer) {
+    if (!params['trainer-name'] || !trainer) {
       notFound();
     }
-  }, [params.id, trainer]);
+  }, [params, trainer]);
 
   const navLinks = [
     { name: 'home', href: '/#team' },
@@ -35,7 +42,7 @@ const DetailedTrainerPage = () => {
   if (trainer) {
     navLinks.push({
       name: `${trainer.fullName}`,
-      href: `/trainers/${trainer.id}`,
+      href: `/trainers/${trainer.fullName}`,
     });
   }
 

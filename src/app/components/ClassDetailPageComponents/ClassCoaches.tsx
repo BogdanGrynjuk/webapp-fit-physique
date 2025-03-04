@@ -5,8 +5,9 @@ import { trainers } from '@/app/data/trainers';
 
 type ClassCoachesProps = {
   classTitle: string;
+  slug: string;
 };
-const ClassCoaches = ({ classTitle }: ClassCoachesProps) => {
+const ClassCoaches = ({ classTitle, slug }: ClassCoachesProps) => {
   const filteredTrainers = trainers.filter(
     (trainer) => trainer.role.toLocaleLowerCase() === classTitle.toLowerCase(),
   );
@@ -18,12 +19,12 @@ const ClassCoaches = ({ classTitle }: ClassCoachesProps) => {
         {filteredTrainers.map((trainer) => (
           <li key={trainer.id}>
             <TrainerCard
-              id={trainer.id}
               role={trainer.role}
               fullName={trainer.fullName}
               photo={trainer.photo}
               description={trainer.description}
               onlineProfile={trainer.onlineProfile}
+              href={`/${slug}/${trainer.fullName}`}
             />
           </li>
         ))}

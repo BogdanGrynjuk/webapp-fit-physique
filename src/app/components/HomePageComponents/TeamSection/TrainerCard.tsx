@@ -9,20 +9,22 @@ import Link from 'next/link';
 
 type TrainerCardProps = Pick<
   Trainer,
-  'id' | 'photo' | 'fullName' | 'role' | 'description' | 'onlineProfile'
->;
+  'photo' | 'fullName' | 'role' | 'description' | 'onlineProfile'
+> & {
+  href?: string;
+};
 
 const TrainerCard = ({
-  id,
   photo,
   fullName,
   role,
   description,
   onlineProfile,
+  href = `/trainers/${fullName}`,
 }: TrainerCardProps) => {
   return (
     <div className="text-center">
-      <Link href={`/trainers/${id}`} className=" group">
+      <Link href={href} className=" group">
         <div className="relative before:w-5 before:h-5 before:bg-accent before:absolute before:z-10 before:top-0 before:left-0 after:w-5 after:h-5 after:bg-accent after:absolute after:z-10 after:bottom-0 after:right-0 group-hover:after:-bottom-[5px] group-hover:after:-right-[5px] group-hover:before:-top-[5px] group-hover:before:-left-[5px] after:transition-all after:duration-300 before:transition-all before:duration-300">
           <div className="relative w-full aspect-[280/314] mx-auto mb-4 overflow-hidden z-20">
             <Image
