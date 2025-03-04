@@ -51,7 +51,7 @@ export const classList: ClassItem[] = [
       trainingFormats: {
         title: 'Training Formats',
         img: '/assets/img/details/bodybuilding-formats.jpg',
-        text: 'Bodybuilding training at FitPhysique is available in both group and personal training formats, allowing you to choose the best approach for your fitness journey.',
+        text: 'At FitPhysique, you can choose between group or personal bodybuilding training, depending on your preferences and goals. Regardless of your choice, each format will help you achieve maximum results, improve your physique, and develop strength and muscle mass in line with bodybuilding principles.',
         formats: [
           {
             type: 'Group Training',
@@ -100,7 +100,7 @@ export const classList: ClassItem[] = [
       trainingFormats: {
         title: 'Training Formats',
         img: '/assets/img/details/cardio-formats.jpg',
-        text: 'Our cardio classes can be taken in a group setting or through personal training sessions, depending on your fitness goals and preferences.',
+        text: 'At FitPhysique, you can select between group or personal cardio training to match your fitness preferences and objectives. Whether in a group setting or one-on-one, these sessions will help enhance your endurance, boost your metabolism, and improve overall fitness with a focus on dynamic and energizing cardio exercises.',
         formats: [
           {
             type: 'Group Training',
@@ -148,7 +148,7 @@ export const classList: ClassItem[] = [
       trainingFormats: {
         title: 'Training Formats',
         img: '/assets/img/details/fitness-formats.jpg',
-        text: 'You can choose between group and personal fitness training to match your preferences and goals.',
+        text: 'At FitPhysique, you can choose between group or personal fitness training, depending on your preferences and goals. Regardless of your choice, each format will help you improve endurance, enhance flexibility, and build overall strength while following effective fitness principles.',
         formats: [
           {
             type: 'Group Training',
@@ -196,7 +196,7 @@ export const classList: ClassItem[] = [
       trainingFormats: {
         title: 'Training Formats',
         img: '/assets/img/details/crossFit-formats.jpg',
-        text: 'CrossFit classes at FitPhysique offer flexible training formats to match your goals and preferences.',
+        text: 'At FitPhysique, you can choose between group or personal CrossFit training, depending on your preferences and goals. Regardless of your choice, each format will help you boost endurance, enhance functional strength, and improve overall athletic performance through high-intensity and varied workouts.',
         formats: [
           {
             type: 'Group Training',
@@ -244,7 +244,7 @@ export const classList: ClassItem[] = [
       trainingFormats: {
         title: 'Training Formats',
         img: '/assets/img/details/boxing-formats.jpg',
-        text: 'You can attend boxing training with professional trainers in a group or individually. For the best results, experts recommend combining both methods.',
+        text: 'At FitPhysique, you can choose between group or personal boxing training, tailored to your skill level and goals. Whether you’re training in a group for a motivating and competitive atmosphere or receiving personal coaching for focused technique improvement, these sessions will help you build strength, improve agility, and master boxing fundamentals.',
         formats: [
           {
             type: 'Group Training',
@@ -292,7 +292,7 @@ export const classList: ClassItem[] = [
       trainingFormats: {
         title: 'Training Formats',
         img: '/assets/img/details/yoga-formats.jpg',
-        text: 'Yoga classes at FitPhysique are available in different formats to meet your personal needs and preferences.',
+        text: 'At FitPhysique, we offer both group and personal yoga classes, tailored to help you increase flexibility, reduce stress, and enhance mental clarity. Whether you prefer the dynamic energy of a group or the focused attention of a personal session, our yoga programs are designed to improve posture, build strength, and provide a peaceful escape for both body and mind.',
         formats: [
           {
             type: 'Group Training',
