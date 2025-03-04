@@ -1,6 +1,6 @@
 import React from 'react';
 import { ClassDetails } from '@/app/data/classes';
-// import Image from 'next/image';
+import Image from 'next/image';
 
 type ClassTrainingProps = {
   trainingFormats: ClassDetails;
@@ -19,13 +19,13 @@ const ClassTraining = ({ trainingFormats }: ClassTrainingProps) => {
         </p>
 
         <div className="w-full bg-accent aspect-[1280/850] lg:col-start-2 lg:row-start-3 xl:col-start-2 xl:row-span-3 self-center">
-          {/* <Image
+          <Image
             src={img}
             alt={title}
             width={1280}
             height={850}
             className="object-cover"
-          /> */}
+          />
         </div>
 
         {formats && (
