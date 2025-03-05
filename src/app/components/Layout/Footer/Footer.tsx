@@ -23,7 +23,7 @@ const Footer = () => {
         <h2 className="visually-hidden">Footer</h2>
 
         <motion.div
-          variants={staggerFadeIn}
+          variants={staggerFadeIn()}
           initial="hidden"
           whileInView={'show'}
           viewport={{ once: false, amount: 0.05 }}

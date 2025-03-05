@@ -38,7 +38,7 @@ export const classList: ClassItem[] = [
         text: 'Bodybuilding is a strength-focused training method aimed at muscle hypertrophy and sculpting an athletic physique. At FitPhysique, our bodybuilding program is designed for both beginners and experienced athletes looking to enhance their strength and endurance through structured weightlifting routines.',
       },
       benefits: {
-        title: 'Benefits of Bodybuilding Training at FitPhysique',
+        title: 'Benefits of Bodybuilding Training',
         img: '/assets/img/classes/bodybuilding-benefits.jpg',
         text: 'Bodybuilding combines resistance training with proper nutrition to build lean muscle mass, boost metabolism, and improve overall strength. Our classes cater to all fitness levels, whether you want to gain muscle, lose fat, or improve athletic performance.',
         points: [
@@ -85,7 +85,7 @@ export const classList: ClassItem[] = [
         text: 'Cardio workouts focus on improving heart health, endurance, and overall fitness. These sessions involve high-intensity movements that keep your heart rate elevated, making them perfect for weight loss and cardiovascular conditioning. At FitPhysique, our cardio classes are designed for all fitness levels, helping you stay active, burn calories, and feel energized throughout the day.',
       },
       benefits: {
-        title: 'Benefits of Cardio Training at FitPhysique',
+        title: 'Benefits of Cardio Training',
         img: '/assets/img/classes/cardio-benefits.jpg',
         text: 'Cardio workouts incorporate exercises like running, jumping, and high-intensity drills to elevate the heart rate and improve overall fitness. These sessions provide numerous health benefits and can be tailored to individual fitness levels.',
         points: [
@@ -133,7 +133,7 @@ export const classList: ClassItem[] = [
         text: 'Fitness training is a universal way to improve overall physical health, flexibility, and endurance. At FitPhysique, we offer structured workouts for all levels, helping individuals achieve their fitness goals, whether they want to lose weight, build muscle, or simply maintain an active lifestyle.',
       },
       benefits: {
-        title: 'Benefits of Fitness Training at FitPhysique',
+        title: 'Benefits of Fitness Training',
         img: '/assets/img/classes/fitness-benefits.jpg',
         text: 'Our fitness classes provide a well-rounded approach to health and wellness. Whether you are a beginner or an experienced athlete, our workouts are designed to improve strength, flexibility, and endurance.',
         points: [
@@ -180,7 +180,7 @@ export const classList: ClassItem[] = [
         text: 'CrossFit is a high-intensity training system that combines strength exercises, endurance training, and functional movements. At FitPhysique, our CrossFit classes are designed for all fitness levels, offering scalable workouts that push your limits while improving overall athleticism.',
       },
       benefits: {
-        title: 'Benefits of CrossFit Training at FitPhysique',
+        title: 'Benefits of CrossFit Training',
         img: '/assets/img/classes/crossFit-benefits.jpg',
         text: 'CrossFit workouts are based on constantly varied, functional movements performed at high intensity. This makes them highly effective for building strength, endurance, and agility.',
         points: [
@@ -227,7 +227,7 @@ export const classList: ClassItem[] = [
         text: 'Boxing is not just a martial art but a universal sport that trains endurance and builds confidence. It can be practiced at any age, so both adults and children actively attend training. The boxing section at FitPhysique attracts both men and women. For men, it is an opportunity to believe in their strength, overcome fears, and improve physical fitness. For women, training is a way to take care of their figure and acquire self-defense skills.',
       },
       benefits: {
-        title: 'Benefits of Boxing Training at FitPhysique',
+        title: 'Benefits of Boxing Training',
         img: '/assets/img/classes/boxing-benefits.jpg',
         text: 'This type of martial art involves delivering punches with fists. At the same time, all muscle groups are engaged, resulting in an effect no worse than cardio or strength training. Classes are available for all fitness levels – you can start from scratch or continue developing to become a professional athlete.',
         points: [
@@ -274,7 +274,7 @@ export const classList: ClassItem[] = [
         text: 'Yoga is an ancient practice that combines physical postures, breathing techniques, and meditation to promote overall well-being. At FitPhysique, our yoga classes are designed to help you relax, improve flexibility, and strengthen both body and mind.',
       },
       benefits: {
-        title: 'Benefits of Yoga Training at FitPhysique',
+        title: 'Benefits of Yoga Training',
         img: '/assets/img/classes/yoga-benefits.jpg',
         text: 'Yoga offers a holistic approach to health by improving flexibility, reducing stress, and enhancing mindfulness. Our classes cater to all experience levels, from beginners to advanced practitioners.',
         points: [

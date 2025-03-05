@@ -20,7 +20,7 @@ const Achievements = () => {
       <h3 className="visually-hidden">Our achievements</h3>
 
       <motion.ul
-        variants={staggerFadeIn}
+        variants={staggerFadeIn()}
         initial="hidden"
         whileInView={'show'}
         viewport={{ once: false, amount: 0.2 }}
