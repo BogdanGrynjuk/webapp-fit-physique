@@ -5,17 +5,17 @@ import { motion } from 'framer-motion';
 
 import { fadeIn } from '@/app/lib/variants';
 
-import BlogsSlider from './BlogsSlider';
+import PostsSlider from './PostsSlider';
 import CustomButton from '../../UI/CustomButton';
 import { useRouter } from 'next/navigation';
 
-const Blogs = () => {
+const Blog = () => {
   const router = useRouter();
 
   return (
     <section
       className="bg-primary-300 pt-8 pb-8 lg:pt-14 lg:pb-14 text-white"
-      id="blogs"
+      id="blog"
     >
       <div className="container mx-auto flex flex-col gap-5">
         <motion.h2
@@ -25,7 +25,7 @@ const Blogs = () => {
           viewport={{ once: false, amount: 0.2 }}
           className="h2 text-center"
         >
-          Blogs
+          Blog
         </motion.h2>
         <motion.div
           variants={fadeIn('up', 0.4)}
@@ -33,7 +33,7 @@ const Blogs = () => {
           whileInView={'show'}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <BlogsSlider />
+          <PostsSlider />
         </motion.div>
         <motion.div
           variants={fadeIn('up', 0.6)}
@@ -43,7 +43,7 @@ const Blogs = () => {
           className="mx-auto"
         >
           <CustomButton
-            onClick={() => router.push('/blogs')}
+            onClick={() => router.push('/blog')}
             text={'view all'}
             containerStyles="w-[100px] h-[40px] md:w-[162px] md:h-[56px]"
           />
@@ -53,4 +53,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default Blog;

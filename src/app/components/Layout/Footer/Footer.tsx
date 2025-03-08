@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { fadeIn, staggerFadeIn, scale } from '@/app/lib/variants';
 
 import ContactsSection from './ContactsSection';
-import BlogsSection from './BlogsSection';
+import BlogsSection from './BlogSection';
 import GallerySection from './GallerySection';
 import NewsletterSection from './NewsletterSection';
 

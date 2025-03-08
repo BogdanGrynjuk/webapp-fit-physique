@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
-import { blogsList } from '@/app/data/blogs';
+import { posts } from '@/app/data/posts';
 
 import CustomButton from '@/app/components/UI/CustomButton';
 import Header from '@/app/components/BlogsPageComponents/Header';
@@ -14,16 +14,17 @@ import SearchInput from '@/app/components/UI/SearchInput';
 import DropdownSelect from '@/app/components/UI/DropdownSelect';
 
 import { FaSort } from 'react-icons/fa6';
+import Link from 'next/link';
 
 const navLinks = [
-  { name: 'home', href: '/#blogs' },
-  { name: 'Blogs', href: '/blogs' },
+  { name: 'home', href: '/#blog' },
+  { name: 'blog', href: '/blog' },
 ];
 
 const sortTitleOptions = ['Alphabetical (A-Z)', 'Alphabetical (Z-A)'];
 const sortDateOptions = ['Newest First', 'Oldest First'];
-const Page = () => {
-  const [filteredBlogs, setFilteredBlogs] = useState(blogsList);
+const BlogPage = () => {
+  const [filteredPosts, setFilteredPosts] = useState(posts);
 
   const [query, setQuery] = useState('');
   const [selectedTitleSort, setSelectedTitleSort] = useState('');
@@ -31,8 +32,8 @@ const Page = () => {
 
   const handleSearch = (searchQuery: string) => {
     setQuery(searchQuery);
-    setFilteredBlogs(
-      blogsList.filter(({ title }) =>
+    setFilteredPosts(
+      posts.filter(({ title }) =>
         title.toLowerCase().includes(query.toLowerCase()),
       ),
     );
@@ -42,8 +43,8 @@ const Page = () => {
     setQuery('');
     setSelectedDateSort('');
     setSelectedTitleSort(option);
-    setFilteredBlogs((prevBlogs) =>
-      [...prevBlogs].sort((a, b) =>
+    setFilteredPosts((prevPosts) =>
+      [...prevPosts].sort((a, b) =>
         option === 'Alphabetical (A-Z)'
           ? a.title.localeCompare(b.title)
           : b.title.localeCompare(a.title),
@@ -55,8 +56,8 @@ const Page = () => {
     setQuery('');
     setSelectedTitleSort('');
     setSelectedDateSort(option);
-    setFilteredBlogs((prevBlogs) =>
-      [...prevBlogs].sort((a, b) =>
+    setFilteredPosts((prevPosts) =>
+      [...prevPosts].sort((a, b) =>
         option === 'Newest First'
           ? new Date(b.date).getTime() - new Date(a.date).getTime()
           : new Date(a.date).getTime() - new Date(b.date).getTime(),
@@ -65,7 +66,7 @@ const Page = () => {
   };
 
   const handleFilterClear = () => {
-    setFilteredBlogs(blogsList);
+    setFilteredPosts(posts);
   };
   return (
     <>
@@ -73,7 +74,7 @@ const Page = () => {
       <main>
         <section className="mt-[100px] pt-8 pb-8 lg:pt-14 lg:pb-14">
           <div className="container mx-auto flex flex-col gap-10 items-center">
-            <h1 className="h2 text-center">Blogs</h1>
+            <h1 className="h2 text-center">Blog</h1>
 
             <div className="flex flex-col md:flex-row gap-4">
               <SearchInput
@@ -103,22 +104,35 @@ const Page = () => {
               />
             </div>
 
-            {filteredBlogs.length > 0 ? (
+            {filteredPosts.length > 0 ? (
               <motion.ul
                 variants={fadeIn('up', 0.8)}
                 initial="hidden"
                 whileInView={'show'}
                 viewport={{ once: true, amount: 0.01 }}
-                className="grid grid-cols-1  gap-5"
+                className="w-full flex flex-col gap-4"
               >
-                {filteredBlogs.map((blog) => {
+                {filteredPosts.map((post) => {
                   return (
-                    <li key={blog.id}>
-                      <p>
-                        <span>{blog.id}</span>
-                        <span>{' - '}</span>
-                        <span>{blog.title}</span>
-                      </p>
+                    <li key={post.id}>
+                      <Link
+                        href={`/blog/${post.id}`}
+                        className="p-4 flex items-center justify-between gap-4 bg-gray-200"
+                      >
+                        <div>
+                          <p>{post.title}</p>
+                          <p>{post.shortDescription}</p>
+                          <p>{post.date}</p>
+                        </div>
+                        <div className="w-[200px] aspect-[1280/850]">
+                          <Image
+                            src={post.img}
+                            alt={post.title}
+                            width={280}
+                            height={233}
+                          />
+                        </div>
+                      </Link>
                     </li>
                   );
                 })}
@@ -146,7 +160,7 @@ const Page = () => {
                   viewport={{ amount: 0.05 }}
                   className="text-accent text-xl font-semibold"
                 >
-                  No blogs were found for your query.
+                  No posts were found for your query.
                 </motion.p>
                 <motion.div
                   variants={fadeIn('up', 0.6)}
@@ -171,4 +185,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default BlogPage;

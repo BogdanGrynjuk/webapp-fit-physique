@@ -12,9 +12,9 @@ import CustomButton from '@/app/components/UI/CustomButton';
 
 const NotFound = () => {
   const navLinks = [
-    { name: 'home', href: '/#blogs' },
-    { name: 'blogs', href: '/blogs' },
-    { name: 'not found', href: '/blogs' },
+    { name: 'home', href: '/#blog' },
+    { name: 'blog', href: '/blog' },
+    { name: 'not found', href: '/blog' },
   ];
 
   const router = useRouter();
@@ -43,7 +43,7 @@ const NotFound = () => {
             viewport={{ amount: 0.05 }}
             className="text-accent text-xl font-semibold"
           >
-            This Blog is unavailable.
+            This post is unavailable.
           </motion.p>
           <motion.div
             variants={fadeIn('up', 0.6)}
@@ -55,7 +55,7 @@ const NotFound = () => {
               containerStyles={'w-[146px] h-[40px] md:w-[162px] md:h-[56px]'}
               text={'try again'}
               onClick={() => {
-                router.replace('/blogs');
+                router.replace('/blog');
               }}
             />
           </motion.div>

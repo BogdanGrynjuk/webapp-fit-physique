@@ -1,26 +1,23 @@
 import React from 'react';
 
+import { Post } from '@/app/data/posts';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
-const BlogCard = ({
+const PostCard = ({
   img,
   date,
   title,
   id,
-}: {
-  img: string;
-  date: string;
-  title: string;
-  id: string;
-}) => {
+}: Pick<Post, 'img' | 'date' | 'title' | 'id'>) => {
   const dateObj = new Date(date);
   const month = dateObj.toLocaleString('en-US', { month: 'short' });
   const day = dateObj.toLocaleString('en-US', { day: '2-digit' });
 
   return (
     <Link
-      href={`blogs/${id}`}
+      href={`blog/${id}`}
       className="max-w-[300px] h-full mx-auto flex flex-col items-center justify-start gap-4 group"
     >
       <div className="relative w-[300px] h-[auto] ">
@@ -30,11 +27,11 @@ const BlogCard = ({
         </div>
         <Image src={img} alt={`image ${title}`} width={300} height={233} />
       </div>
-      <h6 className="h6 group-hover:text-accent">
-        {id}: {title}
+      <h6 className="h6 group-hover:text-accent transition-all duration-300">
+        {title}
       </h6>
     </Link>
   );
 };
 
-export default BlogCard;
+export default PostCard;

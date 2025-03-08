@@ -7,12 +7,12 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import BlogCard from './BlogCard';
+import PostCard from './PostCard';
 import SwiperNavButtons from '../../UI/SwiperNavButtons';
 
-import { blogsList } from '@/app/data/blogs';
+import { posts } from '@/app/data/posts';
 
-const BlogsSlider = () => {
+const PostsSlider = () => {
   return (
     <div>
       <Swiper
@@ -39,13 +39,13 @@ const BlogsSlider = () => {
         }}
         className="max-h-[420px]"
       >
-        {blogsList.map((blog, index) => (
+        {posts.map((post, index) => (
           <SwiperSlide key={index}>
-            <BlogCard
-              title={blog.title}
-              img={blog.img}
-              date={blog.date}
-              id={blog.id}
+            <PostCard
+              title={post.title}
+              img={post.img}
+              date={post.date}
+              id={post.id}
             />
           </SwiperSlide>
         ))}
@@ -63,4 +63,4 @@ const BlogsSlider = () => {
   );
 };
 
-export default BlogsSlider;
+export default PostsSlider;

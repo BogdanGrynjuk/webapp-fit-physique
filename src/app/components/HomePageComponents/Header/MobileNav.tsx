@@ -11,7 +11,7 @@ const links = [
   { name: 'prices', target: 'membership', offset: -100 },
   { name: 'testimonials', target: 'testimonials', offset: -100 },
   { name: 'faq', target: 'faq', offset: -100 },
-  { name: 'blogs', target: 'blogs', offset: -100 },
+  { name: 'blog', target: 'blog', offset: -100 },
   { name: 'contact us', target: 'footer', offset: -300 },
 ];
 
