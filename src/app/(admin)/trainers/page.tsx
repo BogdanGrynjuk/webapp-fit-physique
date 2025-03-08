@@ -140,7 +140,6 @@ const TrainersPage = () => {
                   return (
                     <li key={trainer.id}>
                       <TrainerCard
-                        id={trainer.id}
                         photo={trainer.photo}
                         fullName={trainer.fullName}
                         role={trainer.role}

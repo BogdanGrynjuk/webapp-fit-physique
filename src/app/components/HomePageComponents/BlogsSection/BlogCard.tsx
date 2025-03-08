@@ -20,7 +20,7 @@ const BlogCard = ({
 
   return (
     <Link
-      href={''}
+      href={`blogs/${id}`}
       className="max-w-[300px] h-full mx-auto flex flex-col items-center justify-start gap-4 group"
     >
       <div className="relative w-[300px] h-[auto] ">

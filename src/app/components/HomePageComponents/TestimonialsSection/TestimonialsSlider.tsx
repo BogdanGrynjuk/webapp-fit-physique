@@ -47,7 +47,7 @@ const customerReviews = [
 const TestimonialsSlider = () => {
   return (
     <motion.div
-      variants={staggerFadeIn}
+      variants={staggerFadeIn()}
       initial="hidden"
       whileInView={'show'}
       viewport={{ once: true, amount: 0.1 }}

@@ -7,6 +7,7 @@ import { FaAngleDown, FaFilter } from 'react-icons/fa6';
 interface DropdownSelectProps {
   options: string[];
   selectedOption: string;
+  icon?: React.ReactNode;
   placeholder?: string;
   label?: string;
   onSelect: (selected: string) => void;
@@ -16,6 +17,7 @@ const DropdownSelect = ({
   options,
   placeholder,
   selectedOption,
+  icon = <FaFilter />,
   label = 'Select an option',
   onSelect,
 }: DropdownSelectProps) => {
@@ -59,7 +61,7 @@ const DropdownSelect = ({
         className="bg-white relative flex w-full p-3 pl-[52px] md:pl-[68px] h-[40px] md:h-[56px] border border-primary-100/50 items-center justify-between"
       >
         <div className="text-white absolute top-0 left-0 w-[40px] md:w-[56px] h-full bg-accent flex items-center justify-center">
-          <FaFilter />
+          {icon}
         </div>
         {selected ? (
           <span>{selected}</span>
