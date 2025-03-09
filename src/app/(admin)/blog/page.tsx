@@ -92,24 +92,24 @@ const BlogPage = () => {
                 yourself.
               </motion.p>
             </div>
-
+            {/* 
             <motion.div
               variants={fadeIn('up', 0.6)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.1 }}
-            >
-              <Toolbar
-                query={query}
-                selectedTitleSort={selectedTitleSort}
-                selectedDateSort={selectedDateSort}
-                handleSearch={handleSearch}
-                handleSortTitleChange={handleSortTitleChange}
-                handleSortDateChange={handleSortDateChange}
-              />
-            </motion.div>
+            > */}
+            <Toolbar
+              query={query}
+              selectedTitleSort={selectedTitleSort}
+              selectedDateSort={selectedDateSort}
+              handleSearch={handleSearch}
+              handleSortTitleChange={handleSortTitleChange}
+              handleSortDateChange={handleSortDateChange}
+            />
+            {/* </motion.div> */}
 
-            {filteredPosts.length > 0 ? (              
+            {filteredPosts.length > 0 ? (
               <PostList posts={filteredPosts} />
             ) : (
               <ContentUnavailable

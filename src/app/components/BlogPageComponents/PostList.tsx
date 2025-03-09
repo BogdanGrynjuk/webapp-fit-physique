@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { motion } from 'framer-motion';
-import { fadeIn, scale, staggerFadeIn } from '@/app/lib/variants';
+import { scale, staggerFadeIn } from '@/app/lib/variants';
 
 import { Post } from '@/app/data/posts';
 
@@ -16,7 +16,7 @@ type PostListProps = {
 const PostList = ({ posts }: PostListProps) => {
   return (
     <motion.ul
-      variants={staggerFadeIn()}
+      variants={staggerFadeIn(0.8)}
       initial="hidden"
       whileInView={'show'}
       viewport={{ once: true, amount: 0.01 }}
