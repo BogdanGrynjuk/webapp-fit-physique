@@ -1,32 +1,20 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
-import TrainerCard from '@/app/components/HomePageComponents/TeamSection/TrainerCard';
-import SearchInput from '@/app/components/UI/SearchInput';
-import DropdownSelect from '@/app/components/UI/DropdownSelect';
-import CustomButton from '@/app/components/UI/CustomButton';
 import Header from '../../components/TrainersPageComponents/Header';
 
 import { trainers } from '@/app/data/trainers';
+import ContentUnavailable from '@/app/components/UI/ContentUnavailable';
+import TrainersToolbar from '@/app/components/TrainersPageComponents/TrainersToolbar';
+import TrainersGrid from '@/app/components/TrainersPageComponents/TrainersGrid';
 
 const navLinks = [
   { name: 'home', href: '/#team' },
   { name: 'trainers', href: '/trainers' },
-];
-
-const roleOptions = [
-  'All Trainers',
-  'Bodybuilding Coaches',
-  'Cardio Coaches',
-  'CrossFit Coaches',
-  'Fitness Coaches',
-  'Boxing Coaches',
-  'Yoga Coaches',
 ];
 
 const roleMapping: Record<string, string> = {
@@ -109,87 +97,29 @@ const TrainersPage = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.05 }}
-              className="flex flex-col sm:flex-row gap-4"
             >
-              <SearchInput
-                label={'trainer name '}
-                placeholder="find trainer by name"
-                onSearch={handleSearch}
-                name={'trainer-name'}
-                searchQuery={query}
-              />
-
-              <DropdownSelect
-                label={'specialization'}
-                placeholder="filter trainers"
-                selectedOption={selectedRole}
-                options={roleOptions}
-                onSelect={handleRoleChange}
+              <TrainersToolbar
+                query={query}
+                handleSearch={handleSearch}
+                selectedRole={selectedRole}
+                handleRoleChange={handleRoleChange}
               />
             </motion.div>
 
             {filteredTrainers.length > 0 ? (
-              <motion.ul
+              <motion.div
                 variants={fadeIn('up', 0.8)}
                 initial="hidden"
                 whileInView={'show'}
                 viewport={{ once: true, amount: 0.01 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
               >
-                {filteredTrainers.map((trainer) => {
-                  return (
-                    <li key={trainer.id}>
-                      <TrainerCard
-                        photo={trainer.photo}
-                        fullName={trainer.fullName}
-                        role={trainer.role}
-                        description={trainer.description}
-                        onlineProfile={trainer.onlineProfile}
-                      />
-                    </li>
-                  );
-                })}
-              </motion.ul>
+                <TrainersGrid trainers={filteredTrainers} />
+              </motion.div>
             ) : (
-              <div className="flex flex-col justify-center items-center gap-4">
-                <motion.div
-                  variants={fadeIn('up', 0.2)}
-                  initial="hidden"
-                  whileInView={'show'}
-                  viewport={{ amount: 0.05 }}
-                >
-                  <Image
-                    src={'/assets/img/tired_athlete.png'}
-                    alt="tired_athlete"
-                    width={280}
-                    height={280}
-                  />
-                </motion.div>
-
-                <motion.p
-                  variants={fadeIn('up', 0.4)}
-                  initial="hidden"
-                  whileInView={'show'}
-                  viewport={{ amount: 0.05 }}
-                  className="text-accent text-xl font-semibold"
-                >
-                  No trainers were found for your query.
-                </motion.p>
-                <motion.div
-                  variants={fadeIn('up', 0.6)}
-                  initial="hidden"
-                  whileInView={'show'}
-                  viewport={{ amount: 0.05 }}
-                >
-                  <CustomButton
-                    text={'reset'}
-                    containerStyles={
-                      'w-[146px] h-[40px] md:w-[162px] md:h-[56px]'
-                    }
-                    onClick={handleFilterClear}
-                  />
-                </motion.div>
-              </div>
+              <ContentUnavailable
+                message="No trainers were found for your query"
+                onClick={handleFilterClear}
+              />
             )}
           </div>
         </section>

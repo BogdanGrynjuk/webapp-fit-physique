@@ -8,7 +8,7 @@ import { fadeIn } from '@/app/lib/variants';
 import { posts } from '@/app/data/posts';
 
 import Header from '@/app/components/BlogPageComponents/Header';
-import Toolbar from '@/app/components/BlogPageComponents/Toolbar';
+import Toolbar from '@/app/components/BlogPageComponents/BlogToolbar';
 import ContentUnavailable from '@/app/components/UI/ContentUnavailable';
 import PostList from '@/app/components/BlogPageComponents/PostList';
 
@@ -92,13 +92,7 @@ const BlogPage = () => {
                 yourself.
               </motion.p>
             </div>
-            {/* 
-            <motion.div
-              variants={fadeIn('up', 0.6)}
-              initial="hidden"
-              whileInView={'show'}
-              viewport={{ once: false, amount: 0.1 }}
-            > */}
+
             <Toolbar
               query={query}
               selectedTitleSort={selectedTitleSort}
@@ -107,7 +101,6 @@ const BlogPage = () => {
               handleSortTitleChange={handleSortTitleChange}
               handleSortDateChange={handleSortDateChange}
             />
-            {/* </motion.div> */}
 
             {filteredPosts.length > 0 ? (
               <PostList posts={filteredPosts} />

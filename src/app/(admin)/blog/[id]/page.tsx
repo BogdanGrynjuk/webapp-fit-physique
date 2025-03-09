@@ -47,15 +47,12 @@ const PostDetailPage = () => {
         <div className="container mx-auto flex flex-col gap-8 items-center">
           {post && (
             <>
-              <motion.h1
-                variants={fadeIn('up', 0.2)}
-                initial={'hidden'}
-                whileInView={'show'}
-                viewport={{ once: true, amount: 0.2 }}
-                className="h1 text-center text-accent"
-              >
-                {post.title}
-              </motion.h1>
+              <div>
+                <h1 className="h2 text-center text-accent">{post.title}</h1>
+                <p>
+                  author {post.author.name} || {post.date}
+                </p>
+              </div>
 
               <div className="grid grid-cols-1">
                 <div>

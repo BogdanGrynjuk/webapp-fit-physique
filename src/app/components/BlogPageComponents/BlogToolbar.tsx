@@ -20,7 +20,7 @@ type ToolbarProps = {
   handleSortTitleChange: (option: string) => void;
   handleSortDateChange: (option: string) => void;
 };
-const Toolbar = ({
+const BlogToolbar = ({
   query,
   selectedTitleSort,
   selectedDateSort,
@@ -80,4 +80,4 @@ const Toolbar = ({
   );
 };
 
-export default Toolbar;
+export default BlogToolbar;
