@@ -10,7 +10,7 @@ import { fadeIn } from '@/app/lib/variants';
 import { posts } from '@/app/data/posts';
 
 import Image from 'next/image';
-import Header from '@/app/components/BlogsPageComponents/Header';
+import Header from '@/app/components/BlogPageComponents/Header';
 
 const PostDetailPage = () => {
   const params = useParams();

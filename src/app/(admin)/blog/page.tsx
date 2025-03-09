@@ -8,21 +8,17 @@ import { fadeIn } from '@/app/lib/variants';
 import { posts } from '@/app/data/posts';
 
 import CustomButton from '@/app/components/UI/CustomButton';
-import Header from '@/app/components/BlogsPageComponents/Header';
+import Header from '@/app/components/BlogPageComponents/Header';
 import Image from 'next/image';
-import SearchInput from '@/app/components/UI/SearchInput';
-import DropdownSelect from '@/app/components/UI/DropdownSelect';
 
-import { FaSort } from 'react-icons/fa6';
 import Link from 'next/link';
+import Toolbar from '@/app/components/BlogPageComponents/Toolbar';
 
 const navLinks = [
   { name: 'home', href: '/#blog' },
   { name: 'blog', href: '/blog' },
 ];
 
-const sortTitleOptions = ['Alphabetical (A-Z)', 'Alphabetical (Z-A)'];
-const sortDateOptions = ['Newest First', 'Oldest First'];
 const BlogPage = () => {
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
@@ -67,6 +63,9 @@ const BlogPage = () => {
 
   const handleFilterClear = () => {
     setFilteredPosts(posts);
+    setQuery('');
+    setSelectedTitleSort('');
+    setSelectedDateSort('');
   };
   return (
     <>
@@ -74,35 +73,44 @@ const BlogPage = () => {
       <main>
         <section className="mt-[100px] pt-8 pb-8 lg:pt-14 lg:pb-14">
           <div className="container mx-auto flex flex-col gap-10 items-center">
-            <h1 className="h2 text-center">Blog</h1>
-
-            <div className="flex flex-col md:flex-row gap-4">
-              <SearchInput
-                label={'blog title'}
-                placeholder="find blog by title"
-                onSearch={handleSearch}
-                name={'blog-title'}
-                searchQuery={query}
-              />
-
-              <DropdownSelect
-                label={'sort by title'}
-                placeholder="sort blogs by title"
-                selectedOption={selectedTitleSort}
-                options={sortTitleOptions}
-                onSelect={handleSortTitleChange}
-                icon={<FaSort />}
-              />
-
-              <DropdownSelect
-                label={'sort by date'}
-                placeholder="sort blogs by date"
-                selectedOption={selectedDateSort}
-                options={sortDateOptions}
-                onSelect={handleSortDateChange}
-                icon={<FaSort />}
-              />
+            <div className="flex flex-col gap-2 items-center text-center">
+              <motion.h1
+                variants={fadeIn('up', 0.2)}
+                initial="hidden"
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.1 }}
+                className="h2"
+              >
+                Blog
+              </motion.h1>
+              <motion.p
+                variants={fadeIn('up', 0.4)}
+                initial="hidden"
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.1 }}
+                className="text-sm mobile:text-base max-w-[600px] mx-auto"
+              >
+                On our blog, you will find up-to-date articles on training,
+                nutrition, and health to help you become the best version of
+                yourself.
+              </motion.p>
             </div>
+
+            <motion.div
+              variants={fadeIn('up', 0.6)}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.1 }}
+            >
+              <Toolbar
+                query={query}
+                selectedTitleSort={selectedTitleSort}
+                selectedDateSort={selectedDateSort}
+                handleSearch={handleSearch}
+                handleSortTitleChange={handleSortTitleChange}
+                handleSortDateChange={handleSortDateChange}
+              />
+            </motion.div>
 
             {filteredPosts.length > 0 ? (
               <motion.ul

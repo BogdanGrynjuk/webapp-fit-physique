@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
-import Header from '@/app/components/BlogsPageComponents/Header';
+import Header from '@/app/components/BlogPageComponents/Header';
 import CustomButton from '@/app/components/UI/CustomButton';
 
 const NotFound = () => {
