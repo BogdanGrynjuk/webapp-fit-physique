@@ -7,13 +7,10 @@ import { fadeIn } from '@/app/lib/variants';
 
 import { posts } from '@/app/data/posts';
 
-import CustomButton from '@/app/components/UI/CustomButton';
 import Header from '@/app/components/BlogPageComponents/Header';
-import Image from 'next/image';
-
-import Link from 'next/link';
 import Toolbar from '@/app/components/BlogPageComponents/Toolbar';
 import ContentUnavailable from '@/app/components/UI/ContentUnavailable';
+import PostList from '@/app/components/BlogPageComponents/PostList';
 
 const navLinks = [
   { name: 'home', href: '/#blog' },
@@ -112,39 +109,8 @@ const BlogPage = () => {
               />
             </motion.div>
 
-            {filteredPosts.length > 0 ? (
-              <motion.ul
-                variants={fadeIn('up', 0.8)}
-                initial="hidden"
-                whileInView={'show'}
-                viewport={{ once: true, amount: 0.01 }}
-                className="w-full flex flex-col gap-4"
-              >
-                {filteredPosts.map((post) => {
-                  return (
-                    <li key={post.id}>
-                      <Link
-                        href={`/blog/${post.id}`}
-                        className="p-4 flex items-center justify-between gap-4 bg-gray-200"
-                      >
-                        <div>
-                          <p>{post.title}</p>
-                          <p>{post.shortDescription}</p>
-                          <p>{post.date}</p>
-                        </div>
-                        <div className="w-[200px] aspect-[1280/850]">
-                          <Image
-                            src={post.img}
-                            alt={post.title}
-                            width={280}
-                            height={233}
-                          />
-                        </div>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </motion.ul>
+            {filteredPosts.length > 0 ? (              
+              <PostList posts={filteredPosts} />
             ) : (
               <ContentUnavailable
                 message="No posts were found for your query."
