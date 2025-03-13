@@ -12,6 +12,7 @@ import Header from '@/app/components/BlogPageComponents/Header';
 import PostImg from '@/app/components/PostDetailPage/PostImg';
 import PostLabel from '@/app/components/PostDetailPage/PostLabel';
 import PostContent from '@/app/components/PostDetailPage/PostContent';
+import PostQuote from '@/app/components/PostDetailPage/PostQuote';
 
 const PostDetailPage = () => {
   const params = useParams();
@@ -78,7 +79,7 @@ const PostDetailPage = () => {
                   viewport={{ once: false, amount: 0.1 }}
                 >
                   <PostLabel
-                    author={post.author}
+                    author={post.author.name}
                     date={post.date}
                     containerStyles={
                       'flex flex-col mobile:flex-row  mobile:gap-4 mobile:mt-2 md:mt-4'
@@ -88,6 +89,13 @@ const PostDetailPage = () => {
               </div>
 
               <PostContent content={post.content} />
+              <PostQuote
+                containerStyles={
+                  'w-full min-h-[150px] p-4 flex flex-col items-center justify-center gap-2 bg-gray-200 border-l-8 border-accent'
+                }
+                quote={post.author.quote}
+                authorName={post.author.name}
+              />
             </div>
           </section>
         )}

@@ -1,11 +1,12 @@
-import { Post } from '@/app/data/posts';
+import { Post, PostAuthor } from '@/app/data/posts';
 import Link from 'next/link';
 import React from 'react';
 
 import { LiaUser, LiaClock } from 'react-icons/lia';
 
-type PostLabelProps = Pick<Post, 'author' | 'date'> & {
+type PostLabelProps = Pick<Post, 'date'> & {
   containerStyles: string;
+  author: PostAuthor['name'];
 };
 const PostLabel = ({ author, date, containerStyles }: PostLabelProps) => {
   const dateObj = new Date(date);
@@ -13,7 +14,6 @@ const PostLabel = ({ author, date, containerStyles }: PostLabelProps) => {
   const month = dateObj.toLocaleString('en-US', { month: 'long' });
   const year = dateObj.getFullYear();
 
-  const authorName = author.name;
   const dateString = `${month} ${day}, ${year}`;
 
   return (
@@ -21,10 +21,10 @@ const PostLabel = ({ author, date, containerStyles }: PostLabelProps) => {
       <div className="flex gap-2 items-center">
         <LiaUser className="text-2xl font-semibold text-accent" />
         <Link
-          href={`/trainers/${authorName}`}
+          href={`/trainers/${author}`}
           className="text-primary-100/50 uppercase text-sm mobile:text-base tracking-[1px] font-semibold hover:text-accent transition-all duration-300"
         >
-          {authorName}
+          {author}
         </Link>
       </div>
 

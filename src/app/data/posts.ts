@@ -88,7 +88,7 @@ export const posts: Post[] = [
     author: {
       name: 'Olivia Johnson',
       photo: '/assets/img/trainers/olivia.jpg',
-      quote: 'Consistency and discipline are the keys to a perfect shape.',
+      quote: 'Consistency and discipline are the keys to a perfect shape',
     },
     comments: [
       {
@@ -200,7 +200,7 @@ export const posts: Post[] = [
     author: {
       name: 'Nina Anderson',
       photo: '/assets/img/trainers/nina.jpg',
-      quote: 'Training smarter, not harder, is the key to long-term success.',
+      quote: 'Training smarter, not harder, is the key to long-term success',
     },
     comments: [
       {
@@ -277,7 +277,7 @@ export const posts: Post[] = [
     author: {
       name: 'David Williams',
       photo: '/assets/img/trainers/david.jpg',
-      quote: 'Consistency and smart training lead to the best results.',
+      quote: 'Consistency and smart training lead to the best results',
     },
     comments: [
       {
@@ -423,7 +423,7 @@ export const posts: Post[] = [
       name: 'Pavel Taylor',
       photo: '/assets/img/trainers/pavel.jpg',
       quote:
-        'Your progress depends not only on how hard you train but also on how well you recover.',
+        'Your progress depends not only on how hard you train but also on how well you recover',
     },
     comments: [
       {
@@ -525,7 +525,7 @@ export const posts: Post[] = [
       name: 'Matt Stonie',
       photo: '/assets/img/trainers/matt.jpg',
       quote:
-        'Endurance isn’t just about lasting longer; it’s about improving every aspect of your fitness journey.',
+        'Endurance is not only about lasting longer but also about improving every aspect of your fitness journey',
     },
     comments: [
       {
@@ -579,8 +579,7 @@ export const posts: Post[] = [
     author: {
       name: 'Sofia Lauren',
       photo: '/assets/img/trainers/sofia.jpg',
-      quote:
-        'A strong core is the foundation of a strong body—train it wisely.',
+      quote: 'A strong core is the foundation of a strong body—train it wisely',
     },
     comments: [
       {
@@ -657,7 +656,7 @@ export const posts: Post[] = [
     author: {
       name: 'Joe Martin',
       photo: '/assets/img/trainers/joe.jpg',
-      quote: 'Functional training prepares you for the movements of life.',
+      quote: 'Functional training prepares you for the movements of life',
     },
     comments: [
       {
