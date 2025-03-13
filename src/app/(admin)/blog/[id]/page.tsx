@@ -11,6 +11,7 @@ import { posts } from '@/app/data/posts';
 import Header from '@/app/components/BlogPageComponents/Header';
 import PostImg from '@/app/components/PostDetailPage/PostImg';
 import PostLabel from '@/app/components/PostDetailPage/PostLabel';
+import PostContent from '@/app/components/PostDetailPage/PostContent';
 
 const PostDetailPage = () => {
   const params = useParams();
@@ -86,9 +87,7 @@ const PostDetailPage = () => {
                 </motion.div>
               </div>
 
-              <div className="grid grid-cols-1">
-                <p className="whitespace-pre-line">{post.content}</p>
-              </div>
+              <PostContent content={post.content} />
             </div>
           </section>
         )}
