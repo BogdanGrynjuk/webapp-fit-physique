@@ -25,7 +25,13 @@ const PostCard = ({
           <span className="text-2xl">{day}</span>
           <span className="text-base">{month}</span>
         </div>
-        <Image src={img} alt={`image ${title}`} width={300} height={233} />
+        <Image
+          src={img}
+          alt={`image ${title}`}
+          width={300}
+          height={233}
+          layout="intrinsic"
+        />
       </div>
       <h6 className="h6 group-hover:text-accent transition-all duration-300">
         {title}
