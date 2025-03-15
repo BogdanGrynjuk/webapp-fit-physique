@@ -49,7 +49,8 @@ const Partners = () => {
               >
                 <Link
                   href={partner.href}
-                  className="relative w-full h-full block"
+                  className="relative block"
+                  style={{ width, height }}
                 >
                   <Image
                     src={partner.img}
