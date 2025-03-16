@@ -38,6 +38,7 @@ const PostImg = ({ title, img }: PostImgProps) => {
           alt={`image for post ${title}`}
           width={1280}
           height={850}
+          priority
         />
       </motion.div>
     </motion.div>

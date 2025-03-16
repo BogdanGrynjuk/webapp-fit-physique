@@ -4,8 +4,6 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
-
-
 const MobileNav = ({
   containerStyles,
   links,

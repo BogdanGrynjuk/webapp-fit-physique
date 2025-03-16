@@ -3,17 +3,11 @@
 import React, { useEffect } from 'react';
 import { notFound, useParams } from 'next/navigation';
 
-import { motion } from 'framer-motion';
-import { fadeIn } from '@/app/lib/variants';
-
 import { posts } from '@/app/data/posts';
 
 import Header from '@/app/components/BlogPageComponents/Header';
-import PostImg from '@/app/components/PostDetailPage/PostImg';
-import PostLabel from '@/app/components/PostDetailPage/PostLabel';
-import PostContent from '@/app/components/PostDetailPage/PostContent';
-import PostQuote from '@/app/components/PostDetailPage/PostQuote';
 import PostCommentsSection from '@/app/components/PostDetailPage/PostCommentsSection';
+import PostDetailSection from '@/app/components/PostDetailPage/PostDetailSection';
 
 const PostDetailPage = () => {
   const params = useParams();
@@ -32,13 +26,8 @@ const PostDetailPage = () => {
   ];
 
   if (post) {
-    const maxLength = 25;
-    const shortTitle =
-      post.title.length > maxLength
-        ? post.title.slice(0, maxLength) + '...'
-        : post.title;
     navLinks.push({
-      name: shortTitle,
+      name: 'post detail',
       href: `/blog/${post.id}`,
     });
   }
@@ -49,57 +38,7 @@ const PostDetailPage = () => {
       <main className="pt-8 pb-8 lg:pt-14 lg:pb-14 flex flex-col gap-8">
         {post && (
           <>
-            <section className="mt-[100px] ">
-              <div className="container mx-auto flex flex-col gap-8 items-center">
-                <div className="flex flex-col gap-2 items-center text-center">
-                  <motion.h1
-                    variants={fadeIn('up', 0.2)}
-                    initial="hidden"
-                    whileInView={'show'}
-                    viewport={{ once: false, amount: 0.1 }}
-                    className="h2"
-                  >
-                    {post.title}
-                  </motion.h1>
-                  <motion.p
-                    variants={fadeIn('up', 0.4)}
-                    initial="hidden"
-                    whileInView={'show'}
-                    viewport={{ once: false, amount: 0.1 }}
-                    className="text-sm mobile:text-base max-w-[600px] mx-auto"
-                  >
-                    {post.shortDescription}
-                  </motion.p>
-                </div>
-
-                <div>
-                  <PostImg title={post.title} img={post.img} />
-                  <motion.div
-                    variants={fadeIn('left', 0.2)}
-                    initial="hidden"
-                    whileInView={'show'}
-                    viewport={{ once: false, amount: 0.1 }}
-                  >
-                    <PostLabel
-                      author={post.author.name}
-                      date={post.date}
-                      containerStyles={
-                        'flex flex-col mobile:flex-row  mobile:gap-4 mobile:mt-2 md:mt-4'
-                      }
-                    />
-                  </motion.div>
-                </div>
-
-                <PostContent content={post.content} />
-                <PostQuote
-                  containerStyles={
-                    'w-full min-h-[150px] p-4 flex flex-col items-center justify-center gap-2 bg-gray-200 border-l-8 border-accent'
-                  }
-                  quote={post.author.quote}
-                  authorName={post.author.name}
-                />
-              </div>
-            </section>
+            <PostDetailSection post={post} />
             <PostCommentsSection comments={post.comments} />
           </>
         )}
