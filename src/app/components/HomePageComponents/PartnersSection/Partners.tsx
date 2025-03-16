@@ -56,6 +56,7 @@ const Partners = () => {
                     src={partner.img}
                     alt={partner.name}
                     fill
+                    sizes="200px"
                     className="opacity-50 hover:opacity-100 object-cover transition-all duration-300"
                   />
                 </Link>

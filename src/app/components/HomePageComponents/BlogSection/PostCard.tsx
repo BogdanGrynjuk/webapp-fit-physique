@@ -28,9 +28,9 @@ const PostCard = ({
         <Image
           src={img}
           alt={`image ${title}`}
-          width={300}
-          height={233}
-          layout="intrinsic"
+          width={1280}
+          height={850}
+          className="w-full aspect-[1280/850]"
         />
       </div>
       <h6 className="h6 group-hover:text-accent transition-all duration-300">
