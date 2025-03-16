@@ -14,7 +14,7 @@ const Blog = () => {
 
   return (
     <section
-      className="bg-primary-300 pt-8 pb-8 lg:pt-14 lg:pb-14 text-white"
+      className="bg-primary-300 pt-8 pb-8 lg:pt-14 lg:pb-14 text-white scroll-mt-[98px]"
       id="blog"
     >
       <div className="container mx-auto flex flex-col gap-5">

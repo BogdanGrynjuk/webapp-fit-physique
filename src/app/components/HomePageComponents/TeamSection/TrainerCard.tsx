@@ -32,6 +32,7 @@ const TrainerCard = ({
               alt={`trainer ${fullName}`}
               width={280}
               height={314}
+              priority
               className="w-full aspect-[280/314] group-hover:scale-105 transition-all duration-300 object-cover"
             />
           </div>

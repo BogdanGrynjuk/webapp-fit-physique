@@ -35,11 +35,9 @@ const MobileNav = ({
             spy={true}
             smooth={true}
             duration={300}
+            isDynamic={true}
             activeClass={'active'}
             onClick={onClose}
-            ignoreCancelEvents={true}
-            isDynamic={true}
-            hashSpy={true}
             className="relative cursor-pointer py-1 px-2 text-base text-white font-medium uppercase hover:text-accent after:absolute after:bottom-1 after:left-2 after:border-b-2 after:border-accent after:content-[''] after:w-0 after:transition-all after:duration-500 transition-all duration-300"
           >
             {link.name}

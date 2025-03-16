@@ -15,7 +15,7 @@ const Classes = () => {
   const router = useRouter();
 
   return (
-    <section id="classes">
+    <section id="classes" className="scroll-mt-[100px]">
       <h2 className="visually-hidden">Classes</h2>
       <motion.ul
         variants={fadeIn('up', 0.2)}

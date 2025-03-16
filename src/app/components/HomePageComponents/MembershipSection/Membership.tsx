@@ -10,7 +10,7 @@ import MembershipSlider from './MembershipSlider';
 const Membership = () => {
   return (
     <section
-      className="relative z-0 pt-8 pb-8 lg:pt-14 lg:pb-14 text-white bg-membership bg-cover bg-no-repeat bg-center flex flex-col"
+      className="relative z-0 pt-8 pb-8 lg:pt-14 lg:pb-14 text-white bg-membership bg-cover bg-no-repeat bg-center flex flex-col scroll-mt-[100px]"
       id="membership"
     >
       <div className="absolute inset-0 bg-black/20 -z-10" />

@@ -37,7 +37,10 @@ const Team = () => {
   }, []);
 
   return (
-    <section className="pt-8 pb-8 lg:pt-14 lg:pb-14" id="team">
+    <section
+      className="pt-8 pb-8 lg:pt-14 lg:pb-14 scroll-mt-[100px]"
+      id="team"
+    >
       <div className="container mx-auto flex flex-col gap-10 items-center">
         <motion.h2
           variants={fadeIn('up', 0.2)}

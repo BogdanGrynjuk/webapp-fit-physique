@@ -10,7 +10,7 @@ import TestimonialForm from './TestimonialForm';
 
 const Testimonials = () => {
   return (
-    <section id="testimonials">
+    <section id="testimonials" className="scroll-mt-[100px]">
       <div className="pt-8 pb-8 lg:pt-14 lg:pb-14">
         <div className="container mx-auto">
           <motion.h2
