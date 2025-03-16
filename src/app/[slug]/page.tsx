@@ -2,8 +2,10 @@
 
 import React, { useEffect } from 'react';
 import { notFound, useParams } from 'next/navigation';
+
 import { ClassItem, classList } from '@/app//data/classes';
-import Header from '../components/ClassDetailPageComponents/Header';
+
+import Header from '../components/Layout/Header';
 import ClassInfo from '../components/ClassDetailPageComponents/ClassInfo';
 import ClassBenefits from '../components/ClassDetailPageComponents/ClassBenefits';
 import ClassTraining from '../components/ClassDetailPageComponents/ClassTraining';
@@ -38,7 +40,7 @@ const ClassDetailPage = () => {
 
   return (
     <>
-      <Header navLinks={navLinks} />
+      <Header links={navLinks} />
       <main className="mt-[100px] pb-8 lg:pb-14 flex flex-col gap-8 items-center">
         <ClassInfo about={about} />
         <ClassBenefits benefits={benefits} />

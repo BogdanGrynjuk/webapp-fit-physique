@@ -7,8 +7,8 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
-import Header from '@/app/components/TrainersPageComponents/Header';
 import CustomButton from '@/app/components/UI/CustomButton';
+import Header from '@/app/components/Layout/Header';
 
 const NotFound = () => {
   const navLinks = [
@@ -20,7 +20,7 @@ const NotFound = () => {
   const router = useRouter();
   return (
     <>
-      <Header navLinks={navLinks} />
+      <Header links={navLinks} />
       <main className="mt-[100px] pt-8 pb-8 lg:pt-14 lg:pb-14">
         <div className="container mx-auto flex flex-col justify-center items-center gap-4">
           <motion.div

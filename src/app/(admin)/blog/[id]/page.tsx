@@ -5,7 +5,7 @@ import { notFound, useParams } from 'next/navigation';
 
 import { posts } from '@/app/data/posts';
 
-import Header from '@/app/components/BlogPageComponents/Header';
+import Header from '@/app/components/Layout/Header';
 import PostCommentsSection from '@/app/components/PostDetailPage/PostCommentsSection';
 import PostDetailSection from '@/app/components/PostDetailPage/PostDetailSection';
 
@@ -34,7 +34,7 @@ const PostDetailPage = () => {
 
   return (
     <>
-      <Header navLinks={navLinks} />
+      <Header links={navLinks} />
       <main className="pt-8 pb-8 lg:pt-14 lg:pb-14 flex flex-col gap-8">
         {post && (
           <>

@@ -5,9 +5,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/app/lib/variants';
 
-import Header from '../../components/TrainersPageComponents/Header';
-
 import { trainers } from '@/app/data/trainers';
+
+import Header from '@/app/components/Layout/Header';
 import ContentUnavailable from '@/app/components/UI/ContentUnavailable';
 import TrainersToolbar from '@/app/components/TrainersPageComponents/TrainersToolbar';
 import TrainersGrid from '@/app/components/TrainersPageComponents/TrainersGrid';
@@ -63,8 +63,7 @@ const TrainersPage = () => {
 
   return (
     <>
-      <Header navLinks={navLinks} />
-
+      <Header links={navLinks} />
       <main>
         <section className="mt-[100px] pt-8 pb-8 lg:pt-14 lg:pb-14">
           <div className="container mx-auto flex flex-col gap-10 items-center">

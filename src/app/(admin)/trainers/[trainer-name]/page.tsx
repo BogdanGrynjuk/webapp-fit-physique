@@ -9,7 +9,7 @@ import { fadeIn } from '@/app/lib/variants';
 
 import { trainers } from '@/app/data/trainers';
 
-import Header from '@/app/components/TrainersPageComponents/Header';
+import Header from '@/app/components/Layout/Header';
 import TrainerImg from '@/app/components/DetailedTrainerPageComponents/TrainerImg';
 import TrainerInfo from '@/app/components/DetailedTrainerPageComponents/TrainerInfo';
 import TrainerDetails from '@/app/components/DetailedTrainerPageComponents/TrainerDetails';
@@ -46,7 +46,7 @@ const DetailedTrainerPage = () => {
 
   return (
     <>
-      <Header navLinks={navLinks} />
+      <Header links={navLinks} />
       <main className="mt-[100px] pt-8 pb-8 lg:pt-14 lg:pb-14">
         <div className="container mx-auto flex flex-col gap-8 items-center">
           {trainer && (
