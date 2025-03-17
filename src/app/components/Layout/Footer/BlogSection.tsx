@@ -25,7 +25,7 @@ const BlogSection = () => {
               key={post.id}
               className="border-b border-white/50 last:border-0 first:-mt-3"
             >
-              <Link href={'#'} className="py-3 group block">
+              <Link href={`/blog/${post.id}`} className="py-3 group block">
                 <h6 className="h6 text-white/70 group-hover:text-accent transition-all duration-300">
                   {post.title}
                 </h6>
