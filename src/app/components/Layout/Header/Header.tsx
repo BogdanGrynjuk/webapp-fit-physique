@@ -98,8 +98,25 @@ const Header = ({ isMainPage = false, links }: HeaderProps) => {
 
         <div className="flex items-center gap-4 text-white">
           <div className="flex items-center gap-4 text-base font-medium ">
-            <button type="button" className="text-4xl">
+            <button
+              type="button"
+              className="text-4xl relative w-9 h-9 flex items-center justify-center"
+            >
               <CgProfile />
+              {Array.from({ length: 40 }).map((_, index, array) => (
+                <span
+                  key={index}
+                  className="absolute top-0 left-0 w-full h-full"
+                  style={{
+                    transform: `rotate(${(360 / array.length) * index}deg)`,
+                  }}
+                >
+                  <span
+                    className="absolute top-0 left-0 w-[4px] h-[4px] rounded-full bg-accent animate-pulse-dot"
+                    style={{ animationDelay: `${0.025 * (index + 1)}s` }}
+                  ></span>
+                </span>
+              ))}
             </button>
           </div>
           <button

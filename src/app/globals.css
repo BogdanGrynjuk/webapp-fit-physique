@@ -142,3 +142,16 @@ nav .active {
     transform: rotateY(0deg);
   }
 }
+@keyframes pulse-dot {
+  0% {
+    transform: scale(1);
+  }
+  80%,
+  100% {
+    transform: scale(0);
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1s linear infinite;
+}
