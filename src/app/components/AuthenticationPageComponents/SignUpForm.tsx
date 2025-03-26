@@ -80,7 +80,7 @@ const SignUpForm = ({ containerStyles }: SignUpFormProps) => {
       <CustomButton
         type="submit"
         containerStyles="w-[100px] h-[40px] md:w-[162px] md:h-[56px] self-center"
-        text={'sign up'}
+        text={'register'}
       />
     </form>
   );
