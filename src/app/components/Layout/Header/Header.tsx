@@ -11,6 +11,7 @@ import DesktopNav from './DesktopNav';
 import { MdClose, MdMenu } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export type ScrollLinkItem = {
   name: string;
@@ -45,6 +46,8 @@ const Header = ({ isMainPage = false, links }: HeaderProps) => {
   const handleCloseMobileNav = () => {
     setIsOpenMobileNav(!isOpenMobileNav);
   };
+
+  const router = useRouter();
 
   return (
     <header
@@ -101,6 +104,7 @@ const Header = ({ isMainPage = false, links }: HeaderProps) => {
             <button
               type="button"
               className="text-4xl relative w-9 h-9 flex items-center justify-center"
+              onClick={() => router.push(`/authentication`)}
             >
               <CgProfile />
               {Array.from({ length: 40 }).map((_, index, array) => (
