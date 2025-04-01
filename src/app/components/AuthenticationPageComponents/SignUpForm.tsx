@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 
 import CustomButton from '../UI/CustomButton';
@@ -9,15 +9,33 @@ type SignUpFormProps = {
   containerStyles: string;
 };
 const SignUpForm = ({ containerStyles }: SignUpFormProps) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(formData);
+  };
   return (
     <form
       className={clsx(
-        'flex flex-col items-center justify-center gap-4 w-full max-w-[420px] mx-auto',
+        'flex flex-col items-center justify-start gap-4 w-full max-w-[420px] mx-auto',
         containerStyles,
       )}
-      onSubmit={() => {
-        console.log('submit');
-      }}
+      onSubmit={handleSubmit}
     >
       <h2 className="h2">Create Account</h2>
       <div className="flex flex-col gap-2 group w-full">
@@ -30,11 +48,11 @@ const SignUpForm = ({ containerStyles }: SignUpFormProps) => {
         <input
           className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium placeholder:capitalize outline-none"
           type="text"
-          id="name"
+          id="sign-up-name"
           name="name"
           placeholder="your name"
-          value={''}
-          onChange={() => console.log('change name')}
+          value={formData.name}
+          onChange={handleInputChange}
           required
         />
       </div>
@@ -49,11 +67,11 @@ const SignUpForm = ({ containerStyles }: SignUpFormProps) => {
         <input
           className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium outline-none"
           type="email"
-          id="email"
+          id="sign-up-email"
           name="email"
           placeholder="Example@gmail.com"
-          value={''}
-          onChange={() => console.log('change email')}
+          value={formData.email}
+          onChange={handleInputChange}
           required
         />
       </div>
@@ -68,11 +86,11 @@ const SignUpForm = ({ containerStyles }: SignUpFormProps) => {
         <input
           className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium outline-none"
           type="password"
-          id="password"
+          id="sign-up-password"
           name="password"
           placeholder="Password"
-          value={''}
-          onChange={() => console.log('change password')}
+          value={formData.password}
+          onChange={handleInputChange}
           required
         />
       </div>

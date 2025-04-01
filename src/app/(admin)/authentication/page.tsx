@@ -30,8 +30,8 @@ const AuthenticationPage = () => {
       >
         <div
           className={clsx(
-            'relative w-full min-h-[calc(100vh-100px)] left-0 top-0 container mx-auto pt-8 pb-8 flex flex-col',
-            'lg:pt-14 lg:pb-14 lg:justify-center lg:gap-8',
+            'relative w-full min-h-[calc(100vh-100px)] container mx-auto pt-8 pb-8 flex flex-col',
+            'lg:pt-14 lg:pb-14 lg:justify-center',
           )}
         >
           <AuthForms isSignUpMode={isSignUpMode} />

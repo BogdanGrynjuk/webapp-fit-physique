@@ -1,18 +1,17 @@
-'use client';
-
-import React, { useState } from 'react';
 import clsx from 'clsx';
-
+import React, { useState } from 'react';
 import CustomButton from '../UI/CustomButton';
 
-type SignInFormProps = {
+type ForgotPasswordFormProps = {
   containerStyles: string;
   onFlip: () => void;
 };
-const SignInForm = ({ containerStyles, onFlip }: SignInFormProps) => {
+const ForgotPasswordForm = ({
+  containerStyles,
+  onFlip,
+}: ForgotPasswordFormProps) => {
   const [formData, setFormData] = useState({
-    name: '',
-    password: '',
+    email: '',
   });
 
   const handleInputChange = (
@@ -39,40 +38,24 @@ const SignInForm = ({ containerStyles, onFlip }: SignInFormProps) => {
         )}
         onSubmit={handleSubmit}
       >
-        <h2 className="h2">Sign In</h2>
+        <h2 className="h2 text-center">Forgot your password</h2>
+        <p className="text-sm mobile:text-base text-center">
+          We will send you an email with recovery instructions
+        </p>
         <div className="flex flex-col gap-2 group w-full">
           <label
             className="uppercase text-[12px] text-primary-100/50 tracking-[1px] font-semibold group-hover:text-accent group-focus-within:text-accent transition-all duration-300"
-            htmlFor="name"
+            htmlFor="email"
           >
-            name
+            email
           </label>
           <input
             className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium placeholder:capitalize outline-none"
-            type="text"
-            id="sign-in-name"
-            name="name"
-            placeholder="your name"
-            value={formData.name}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-
-        <div className="flex flex-col gap-2 group w-full">
-          <label
-            className="uppercase text-[12px] text-primary-100/50 tracking-[1px] font-semibold  group-hover:text-accent group-focus-within:text-accent transition-all duration-300"
-            htmlFor="password"
-          >
-            password
-          </label>
-          <input
-            className="p-3 w-full h-[40px] md:h-[56px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium outline-none"
-            type="password"
-            id="sign-in-password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
+            type="email"
+            id="forgot-password-email"
+            name="email"
+            placeholder="your email"
+            value={formData.email}
             onChange={handleInputChange}
             required
           />
@@ -81,7 +64,7 @@ const SignInForm = ({ containerStyles, onFlip }: SignInFormProps) => {
         <CustomButton
           type="submit"
           containerStyles="w-[100px] h-[40px] md:w-[162px] md:h-[56px] self-center"
-          text={'login'}
+          text={'send'}
         />
 
         <button
@@ -89,11 +72,11 @@ const SignInForm = ({ containerStyles, onFlip }: SignInFormProps) => {
           onClick={onFlip}
           className="uppercase text-[12px] text-primary-100/50 tracking-[1px] font-semibold hover:text-accent transition-all duration-300"
         >
-          Forgot your password?
+          Go back to Sign In
         </button>
       </form>
     </>
   );
 };
 
-export default SignInForm;
+export default ForgotPasswordForm;
