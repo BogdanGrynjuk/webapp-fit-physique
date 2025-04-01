@@ -19,10 +19,10 @@ const SocialLink = ({
       rel="noopener noreferrer"
       className={clsx(
         containerStyles,
-        'group relative overflow-hidden flex flex-col items-center justify-center rounded-full  after:absolute after:content-[""] after:top-[100%] after:left-0 after:w-full after:h-full hover:after:top-0 after:bg-accent after:transition-all after:duration-500',
+        'group/link relative overflow-hidden flex flex-col items-center justify-center rounded-full  after:absolute after:content-[""] after:top-[100%] after:left-0 after:w-full after:h-full hover:after:top-0 after:bg-accent after:transition-all after:duration-500',
       )}
     >
-      <Icon className="relative z-10 transition-all duration-500 text-current text-xl group-hover:text-white group-hover:[transform:rotateY(360deg)]" />
+      <Icon className="relative z-10 transition-all duration-500 text-current text-xl group-hover/link:text-white group-hover/link:[transform:rotateY(360deg)]" />
     </Link>
   );
 };
