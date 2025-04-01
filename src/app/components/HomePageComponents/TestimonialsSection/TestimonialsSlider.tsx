@@ -9,40 +9,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import TestimonialCard from './TestimonialCard';
 
-const customerReviews = [
-  {
-    name: 'Lucy Antony',
-    photo: '/assets/img/testimonial/lucy.jpg',
-    review:
-      'Great atmosphere! The trainers are professional, and workouts are truly motivating.',
-  },
-  {
-    name: 'Michael Smith',
-    photo: '/assets/img/testimonial/michael.jpg',
-    review:
-      'Excellent fitness club! Modern equipment and a helpful, friendly staff.',
-  },
-  {
-    name: 'Maria Garcia',
-    photo: '/assets/img/testimonial/maria.jpg',
-    review:
-      'Workouts are fun and effective! I’ve already noticed progress in just a few weeks.',
-  },
-  {
-    name: 'Jennie Rose',
-    photo: '/assets/img/testimonial/jennie.jpg',
-    review:
-      'Personalized training and a welcoming atmosphere make every session enjoyable.',
-  },
-  {
-    name: 'Mike Martis',
-    photo: '/assets/img/testimonial/mike.jpg',
-    review:
-      'The gym exceeded my expectations! Clean facilities, great service, and pro trainers.',
-  },
-];
+import { customerReviews } from '@/app/data/customerReviews';
+import TestimonialCard from './TestimonialCard';
 
 const TestimonialsSlider = () => {
   return (
