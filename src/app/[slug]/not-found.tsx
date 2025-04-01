@@ -42,7 +42,7 @@ const NotFound = () => {
             viewport={{ amount: 0.05 }}
             className="text-accent text-xl font-semibold"
           >
-            This class is unavailable.
+            No page found for your request.
           </motion.p>
           <motion.div
             variants={fadeIn('up', 0.6)}

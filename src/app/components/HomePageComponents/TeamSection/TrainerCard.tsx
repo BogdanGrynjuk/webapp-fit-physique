@@ -6,13 +6,12 @@ import { useRouter } from 'next/navigation';
 
 import SocialLink from '../../UI/SocialLink';
 import { Trainer } from '@/app/data/trainers';
-import Link from 'next/link';
 
 type TrainerCardProps = Pick<
   Trainer,
   'photo' | 'fullName' | 'role' | 'description' | 'onlineProfile'
 > & {
-  href: string;
+  href?: string;
 };
 
 const TrainerCard = ({

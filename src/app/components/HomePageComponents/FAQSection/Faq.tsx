@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FaqBlock from './FagBlock';
+import FaqBlock from './FaqBlock';
 import InquiryBlock from './InquiryBlock';
 
 const Faq = () => {

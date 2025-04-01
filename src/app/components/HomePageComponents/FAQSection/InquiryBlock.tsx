@@ -105,7 +105,7 @@ const InquiryBlock = () => {
             message
           </label>
           <textarea
-            className="p-3 w-full h-auto lg:max-h-[264px] xl:max-h-[240px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium placeholder:capitalize outline-none"
+            className="p-3 w-full h-auto lg:h-[264px] xl:h-[240px] lg:max-h-[264px] xl:max-h-[240px] border border-primary-100/50 placeholder:text-sm mobile:placeholder:text-base placeholder:text-primary-100/50 placeholder:font-medium placeholder:capitalize outline-none"
             id="message"
             name="message"
             placeholder="message"
