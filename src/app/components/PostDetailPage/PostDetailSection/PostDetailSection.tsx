@@ -64,6 +64,7 @@ const PostDetailSection = ({ post }: PostDetailSectionProps) => {
           }
           quote={post.author.quote}
           authorName={post.author.name}
+          postId={post.id}
         />
       </div>
     </section>

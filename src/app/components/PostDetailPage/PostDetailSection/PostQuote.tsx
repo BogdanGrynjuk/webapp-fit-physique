@@ -4,14 +4,20 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { scale } from '@/app/lib/variants';
 
-import { PostAuthor } from '@/app/data/posts';
+import { Post, PostAuthor } from '@/app/data/posts';
 
 type PostQuoteProps = {
   containerStyles: string;
   quote: PostAuthor['quote'];
   authorName: PostAuthor['name'];
+  postId: Post['id'];
 };
-const PostQuote = ({ containerStyles, quote, authorName }: PostQuoteProps) => {
+const PostQuote = ({
+  containerStyles,
+  quote,
+  authorName,
+  postId,
+}: PostQuoteProps) => {
   return (
     <motion.div
       variants={scale(0.2)}
@@ -24,7 +30,7 @@ const PostQuote = ({ containerStyles, quote, authorName }: PostQuoteProps) => {
         {quote}
       </blockquote>
       <Link
-        href={`/trainers/${authorName}`}
+        href={`/blog/${postId}/${authorName}`}
         className="self-end text-sm group mobile:text-base flex gap-1"
       >
         <span className="lowercase text-primary-300">by</span>
