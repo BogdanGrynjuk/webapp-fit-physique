@@ -169,19 +169,19 @@ export const classList: ClassItem[] = [
 
   {
     name: 'crossFit',
-    img: '/assets/img/classes/crossFit.jpg',
+    img: '/assets/img/classes/cross-fit.jpg',
     description:
       'Challenge your endurance, agility, and power through high-intensity, functional, and explosive workouts.',
     slug: 'crossFit-class',
     details: {
       about: {
         title: 'crossFit class',
-        img: '/assets/img/classes/crossFit-about.jpg',
+        img: '/assets/img/classes/cross-fit-about.jpg',
         text: 'CrossFit is a high-intensity training system that combines strength exercises, endurance training, and functional movements. At FitPhysique, our CrossFit classes are designed for all fitness levels, offering scalable workouts that push your limits while improving overall athleticism.',
       },
       benefits: {
         title: 'Benefits of CrossFit Training',
-        img: '/assets/img/classes/crossFit-benefits.jpg',
+        img: '/assets/img/classes/cross-fit-benefits.jpg',
         text: 'CrossFit workouts are based on constantly varied, functional movements performed at high intensity. This makes them highly effective for building strength, endurance, and agility.',
         points: [
           'Enhanced cardiovascular and muscular endurance through a mix of aerobic and anaerobic exercises.',
@@ -192,7 +192,7 @@ export const classList: ClassItem[] = [
       },
       trainingFormats: {
         title: 'Training Formats',
-        img: '/assets/img/classes/crossFit-formats.jpg',
+        img: '/assets/img/classes/cross-fit-formats.jpg',
         text: 'At FitPhysique, you can choose between group or personal CrossFit training, depending on your preferences and goals. Regardless of your choice, each format will help you boost endurance, enhance functional strength, and improve overall athletic performance through high-intensity and varied workouts.',
         formats: [
           {
