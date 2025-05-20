@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 
-import { notFound, useParams } from 'next/navigation';
+import { notFound, useParams, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 import { fadeIn } from '@/app/lib/variants';
@@ -19,6 +19,7 @@ import CustomButton from '@/app/components/UI/CustomButton';
 
 const DetailedTrainerPage = () => {
   const params = useParams();
+  const router = useRouter();
   const trainerName = decodeURIComponent(
     Array.isArray(params['trainer-name'])
       ? params['trainer-name'][0]
@@ -129,6 +130,7 @@ const DetailedTrainerPage = () => {
                 <CustomButton
                   text={'Reserve a Session'}
                   containerStyles="w-[200px] h-[40px] md:w-[220px] md:h-[56px]"
+                  onClick={() => router.push(`/authentication`)}
                 />
               </motion.div>
             </>

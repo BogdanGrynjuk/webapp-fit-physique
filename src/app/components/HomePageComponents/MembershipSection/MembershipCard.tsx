@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { IconType } from 'react-icons';
 
 import CustomButton from '../../UI/CustomButton';
@@ -15,6 +16,8 @@ type MembershipCardProps = {
 };
 
 const MembershipCard = ({ title, price, benefits }: MembershipCardProps) => {
+  const router = useRouter();
+
   return (
     <div className="px-4 py-7">
       <div className="border border-accent bg-primary-300/60 hover:bg-primary-300/90 hover:scale-105 transition-all duration-300 mx-auto max-w-[288px] md:max-w-sm xl:max-w-none group">
@@ -44,6 +47,7 @@ const MembershipCard = ({ title, price, benefits }: MembershipCardProps) => {
           <CustomButton
             text="buy now"
             containerStyles="w-[146px] h-[40px] md:w-[162px] md:h-[56px]"
+            onClick={() => router.push(`/authentication`)}
           />
         </div>
       </div>

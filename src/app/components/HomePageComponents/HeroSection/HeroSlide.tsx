@@ -3,6 +3,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 import CustomButton from '../../UI/CustomButton';
 
@@ -19,6 +20,8 @@ const HeroSlide = ({
   description: string;
   buttonText: string;
 }) => {
+  const router = useRouter();
+
   return (
     <div
       className={clsx(
@@ -56,6 +59,7 @@ const HeroSlide = ({
           <CustomButton
             text={buttonText}
             containerStyles={'w-[146px] h-[40px] md:w-[162px] md:h-[56px]'}
+            onClick={() => router.push(`/authentication`)}
           />
         </motion.div>
       </div>
